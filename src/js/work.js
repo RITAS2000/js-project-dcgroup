@@ -6,7 +6,15 @@ const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
 const message = document.querySelector('.js-input-message');
 
-input.addEventListener('input', function () {
+if (input.value !== '') {
+  input.addEventListener('input', inputMassege);
+} else {
+  input.removeEventListener('input', inputMassege);
+}
+
+// input.addEventListener('input', inputMassege);
+
+function inputMassege() {
   if (!input.value.trim()) {
     message.style.visibility = 'hidden';
     input.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
@@ -23,7 +31,7 @@ input.addEventListener('input', function () {
     message.style.visibility = 'visible';
     input.style.borderBottom = '1px solid #e74a3b';
   }
-});
+}
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
