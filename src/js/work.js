@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
 import sprite from '../img/sprite.svg';
@@ -106,3 +107,4 @@ function getModalContent(type) {
     `;
   }
 }
+
