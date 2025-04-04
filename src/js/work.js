@@ -84,7 +84,7 @@ function getModalContent(type) {
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg width="22" height="22">
-            <use href="/sprite.svg#icon-close"></use>
+            <use href="/img/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <h3 class="work-modal-title">Thank you for your interest in cooperation!</h3>
@@ -96,7 +96,7 @@ function getModalContent(type) {
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg width="22" height="22">
-            <use href="/sprite.svg#icon-close"></use>
+            <use href="/img/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <h3 class="work-modal-title"><span class="work-modal-span-erorr">Oops!</span> Something went wrong.</h3>
