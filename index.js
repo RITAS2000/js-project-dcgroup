@@ -2,7 +2,7 @@ import{a as d,b as m}from"./assets/vendor-B5h-2u6W.js";(function(){const i=docum
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg width="22" height="22">
-            <use href="../img/sprite.svg#icon-close"></use>
+            <use href="/img/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <h3 class="work-modal-title">Thank you for your interest in cooperation!</h3>
