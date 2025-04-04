@@ -1,7 +1,6 @@
-
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-import sprite from '../img/sprite.svg';
+import sprite from '../public/sprite2.svg';
 
 const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
@@ -107,4 +106,3 @@ function getModalContent(type) {
     `;
   }
 }
-
