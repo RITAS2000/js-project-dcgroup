@@ -302,6 +302,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .work-modal-title {
   font-family: 'Inter Tight', sans-serif;
@@ -350,4 +351,17 @@
         opacity: 0.5;
         transform: scale(1.1);
     }
+}
+.work-icon {
+  width: 22px;
+  height: 22px;
+  stroke: #fbfbfb;
+}
+
+@media (min-width: 768px) {
+  .work-icon {
+    width: 24px;
+    height: 24px;
+
+  }
 }
