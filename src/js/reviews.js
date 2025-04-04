@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Swiper from 'swiper';
 import 'swiper/css';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 
@@ -56,8 +57,11 @@ renderReviews();
 
 function initSwiper() {
   const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Keyboard],
+    //кількість видимих слайдів
     slidesPerView: 'auto',
-    spaceBetween: 20,
+
+    //Стрілки
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -66,20 +70,32 @@ function initSwiper() {
       enabled: true,
       onlyInViewport: true,
     },
-    grabCursor: true,
+
     breakpoints: {
       320: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1440: { slidesPerView: 4 },
+      768: { slidesPerView: 2, grabCursor: true, spaceBetween: 16 },
+      1440: { slidesPerView: 4, grabCursor: true, spaceBetween: 16 },
     },
     on: {
       slideChange: function () {
-        document.querySelector('.swiper-button-prev').disabled =
-          this.isBeginning;
-        document.querySelector('.swiper-button-next').disabled = this.isEnd;
+        const prevBtn = document.querySelector('.swiper-button-prev');
+        const nextBtn = document.querySelector('.swiper-button-next');
+
+        prevBtn.disabled = this.isBeginning;
+        nextBtn.disabled = this.isEnd;
+
+        if (this.isBeginning) {
+          prevBtn.classList.add('disabled');
+        } else {
+          prevBtn.classList.remove('disabled');
+        }
+
+        if (this.isEnd) {
+          nextBtn.classList.add('disabled');
+        } else {
+          nextBtn.classList.remove('disabled');
+        }
       },
     },
   });
-
-  document.querySelector('.swiper-button-prev').disabled = true;
 }
