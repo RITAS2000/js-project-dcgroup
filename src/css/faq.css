@@ -49,7 +49,6 @@ div.faq-item-header .faq-toggle:hover {
 }
 
 .faq-item-content {
-  margin-top: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -73,4 +72,7 @@ div.faq-item-header .faq-toggle:hover {
 }
 .is-active .faq-toggle-img {
   transform: rotate(180deg);
+}
+.is-active .faq-item-content {
+  margin-top: 16px;
 }
