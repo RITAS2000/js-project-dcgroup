@@ -302,6 +302,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
+  -webkit-tap-highlight-color: transparent ;
 }
 .work-modal-title {
   font-family: 'Inter Tight', sans-serif;
