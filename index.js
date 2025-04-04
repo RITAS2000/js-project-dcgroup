@@ -2,7 +2,7 @@ import{a as m,b as p}from"./assets/vendor-B5h-2u6W.js";(function(){const i=docum
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg width="22" height="22">
-            <use href="${a}#icon-close></use>
+            <use href='${a}#icon-close'></use>
           </svg>
         </button>
         <h3 class="work-modal-title">Thank you for your interest in cooperation!</h3>
@@ -12,7 +12,7 @@ import{a as m,b as p}from"./assets/vendor-B5h-2u6W.js";(function(){const i=docum
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg width="22" height="22">
-            <use href="${a}#icon-close"></use>
+            <use href='${a}#icon-close'></use>
           </svg>
         </button>
         <h3 class="work-modal-title"><span class="work-modal-span-erorr">Oops!</span> Something went wrong.</h3>
