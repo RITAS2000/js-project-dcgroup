@@ -1,22 +1,34 @@
+import Accordion from 'accordion-js';
+import "accordion-js/dist/accordion.min.css";
+// import Swiper from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', function () {
-        const content = this.nextElementSibling;
-        const isOpen = content.style.display === 'block';
-        document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
-        content.style.display = isOpen ? 'none' : 'block';
-    });
-});
 
-const swiper = new Swiper('.swiper', {
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    keyboard: {
-        enabled: true,
-        onlyInViewport: false
-    }
-});
-swiper.slideNext();
+// Initialisiere accordion-js
+const accordionItems = document.querySelectorAll('.accordion-item');
+const accordionContent = document.querySelectorAll('.accordion-content');
+
+
+accordionItems.forEach(item =>
+    item.addEventListener("click", () => {
+        const activeContent = document.querySelector('#' + item.dataset.tab);
+
+        if (activeContent.classList.contains("active")) {
+            activeContent.classList.remove("active");
+        } else {
+            accordionContent.forEach(element => {
+                element.classList.remove("active");
+                element.style.maxHeight = '0';
+            });
+
+            accordionItems.forEach(element => element.classList.remove("active"));
+
+            item.classList.add('active');
+            activeContent.classList.add('active');
+            activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+       }
+
+    })
+
+);
