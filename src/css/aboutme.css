@@ -1,162 +1,115 @@
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-top: 275px;
-}
-
-a {
-    text-decoration: none;
-    font-style: normal;
-}
-
-.container {
-    padding: 0 16px;
-    padding: 16px;
-    background-color: #1C1D20;
-}
-
 .about-me {
-    background-color: #1c1d20;
-    color: #fafafa;
-    font-size: 16px;
-    padding: 0 34px;
-    border-radius: 18px 24px 0 0;
-    font-weight: 500;
-    }
+  background-color: #1c1d20;
+  color: #fafafa;
+  font-size: 16px;
+  padding: 0 34px;
+  border-radius: 18px 24px 0 0;
+  font-weight: 500;
+}
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
-.motto{
-    display: flex;
-    gap: 16px;
-    flex-direction: column;
-    padding-top: 32px;
-    margin-bottom: 32px;
-    
+.motto {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  padding-top: 32px;
+  margin-bottom: 32px;
 }
 
-.motto-tittle{
-    font-family: "Inter Tight", sans-serif;
-    text-transform: uppercase;
-    font-size: medium;
+.motto-tittle {
+  font-family: 'Inter Tight', sans-serif;
+  text-transform: uppercase;
+  font-size: medium;
 }
-.span{
-    color: #ED3B44;
+.span {
+  color: #ed3b44;
 }
 
-.accordion{
-    display: flex;
-    gap:20px;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.accordion {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
-     
+
 .accordion-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.32px;
-    text-transform: uppercase;
-    color: rgba(250, 250, 250, 0.4);
-    border: 1px solid #ddd;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
 
 .accordion-item:first-child {
-    border: none;
+  border: none;
 }
 
-.accordion-item arrow{
-    display: inline-flex;
-    position: relative;
-    background-color: transparent;
-    transition: transform 0.5s ease-out;
+.accordion-item arrow {
+  display: inline-flex;
+  position: relative;
+  background-color: transparent;
+  transition: transform 0.5s ease-out;
 }
-
-
 
 .accordion-header {
-    cursor: pointer;
-    color: #f4f4f4;
+  cursor: pointer;
+  color: #f4f4f4;
 }
 .accordion-content {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    font-family: "Inter Tight", sans-serif;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: 'Inter Tight', sans-serif;
+  align-items: center;
 
-    transition: max-height 0.6s ease;
-    overflow: hidden;
-    border-top: none;
-
+  transition: max-height 0.6s ease;
+  overflow: hidden;
+  border-top: none;
 }
 
-.swiper {
-    width: 100%;
-    overflow: hidden;
+/* .swiper {
+  width: 100%;
+  overflow: hidden;
 }
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 20px;
-    background: #ddd;
-}
-
-
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #ddd;
+} */
 
 @media screen and (min-width: 375px) {
-    
 }
 @media screen and (min-width: 768px) {
-    .motto{
-        margin-bottom: 60px;
-    }
+  .motto {
+    margin-bottom: 60px;
+  }
 }
-
 
 @media screen and (min-width: 1440px) {
-    .motto{
-        margin-bottom: 94px;
-    }
+  .motto {
+    margin-bottom: 94px;
+  }
 }
-
-
-
