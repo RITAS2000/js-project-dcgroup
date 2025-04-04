@@ -354,6 +354,7 @@
 .work-icon{
   width: 22px;
   height: 22px;
+  stroke: #fbfbfb;
 }
 @media (min-width: 768px) {
   .work-icon {
