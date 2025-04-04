@@ -360,6 +360,11 @@
         transform: scale(1.1);
     }
 }
+.work-icon{
+  width: 22px;
+  height: 22px;
+}
+
 .work-icon {
   width: 22px;
   height: 22px;
@@ -370,6 +375,5 @@
   .work-icon {
     width: 24px;
     height: 24px;
-
   }
 }
