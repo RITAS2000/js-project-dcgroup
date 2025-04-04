@@ -17,6 +17,11 @@
 .faq-item {
   padding: 20px 0;
 }
+@media only screen and (min-width: 768px) {
+  .faq-item {
+    padding: 32px 0;
+  }
+}
 .faq-list .faq-item .faq-item-header {
   display: flex;
   justify-content: space-between;
@@ -38,6 +43,13 @@ div.faq-item-header .faq-toggle {
   display: flex;
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease;
+}
+@media only screen and (min-width: 768px) {
+  div.faq-item-header .faq-toggle {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
 }
 .faq-toggle-img {
   transition: transform 0.3s ease;
@@ -75,4 +87,9 @@ div.faq-item-header .faq-toggle:hover {
 }
 .is-active .faq-item-content {
   margin-top: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .is-active .faq-item-content {
+    margin-top: 26px;
+  }
 }
