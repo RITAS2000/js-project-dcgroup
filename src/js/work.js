@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-import spriteWork from '../img/sprite.svg';
+// import spriteWork from '../img/sprite.svg';
 
 const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
@@ -93,9 +93,11 @@ function getModalContent(type) {
     return `
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
-          <svg class="work-icon">
-            <use  href='${spriteWork}#icon-close'></use>
-          </svg>
+        <svg  class="work-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.5 5.5L5.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M5.5 5.5L16.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+        
         </button>
         <h3 class="work-modal-title">Thank you for your interest in cooperation!</h3>
         <p class="work-modal-text">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
@@ -105,9 +107,10 @@ function getModalContent(type) {
     return `
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
-          <svg class="work-icon">
-            <use  href='${spriteWork}#icon-close'></use>
-          </svg>
+            <svg  class="work-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.5 5.5L5.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M5.5 5.5L16.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
         </button>
         <h3 class="work-modal-title"><span class="work-modal-span-erorr">Oops!</span> Something went wrong.</h3>
         <p class="work-modal-text">Please try again later.</p>
