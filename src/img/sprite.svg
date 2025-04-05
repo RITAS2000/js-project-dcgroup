@@ -22,5 +22,8 @@
     <symbol id="icon-arrow-right" viewBox="0 0 32 32">
       <path fill="none" stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M6 16h21.333M19.333 8l8 8-8 8" style="stroke:var(--color1, #fafafa)"/>
     </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 32 32">
+      <path fill="none" stroke="#fafafa" stroke-width="3.2" d="m24 12-8 8-8-8" style="stroke:var(--color1, #fafafa)"/>
+    </symbol>
   </defs>
 </svg>
