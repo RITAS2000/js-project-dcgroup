@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.projects-swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
   keyboard: {
@@ -25,5 +25,3 @@ swiper.on('slideChange', () => {
 swiper.on('init', () => {
   prevBtn.classList.add('disabled');
 });
-
-swiper.init();
