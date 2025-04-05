@@ -1,15 +1,19 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-import sprite from '../img/sprite.svg';
+import spriteWork from '../img/sprite.svg';
 
 const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
 const message = document.querySelector('.js-input-message');
 
-input.addEventListener('input', function () {
+input.addEventListener('input', inputMassege);
+
+function inputMassege() {
   if (!input.value.trim()) {
     message.style.visibility = 'hidden';
     input.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
+    input.removeEventListener('input', inputMassege);
+    form.removeEventListener('submit', sendPost);
   } else if (input.checkValidity()) {
     message.textContent = 'Succes!';
     message.classList.remove('error');
@@ -23,9 +27,11 @@ input.addEventListener('input', function () {
     message.style.visibility = 'visible';
     input.style.borderBottom = '1px solid #e74a3b';
   }
-});
+}
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', sendPost);
+
+function sendPost(event) {
   event.preventDefault();
   const email = document.querySelector('input[type="email"]').value.trim();
   const text = document.querySelector('input[type="text"]').value.trim();
@@ -52,7 +58,7 @@ form.addEventListener('submit', function (event) {
     .catch(error => {
       showModal('error');
     });
-});
+}
 
 function showModal(type) {
   const modalContent = getModalContent(type);
@@ -62,21 +68,26 @@ function showModal(type) {
   document.body.style.overflow = 'hidden';
 
   const closeButton = instance.element().querySelector('.work-close-btn');
-  closeButton.addEventListener('click', () => {
+  closeButton.addEventListener('click', instanceClose);
+
+  function instanceClose() {
     instance.close();
     document.body.style.overflow = '';
-  });
+    closeButton.removeEventListener('click', instanceClose);
+    document.removeEventListener('keydown', closeOnEscape);
+  }
+
+  document.addEventListener('keydown', closeOnEscape);
 
   function closeOnEscape(event) {
     if (event.key === 'Escape') {
       document.activeElement.blur();
       instance.close();
       document.body.style.overflow = '';
+      closeButton.removeEventListener('click', instanceClose);
       document.removeEventListener('keydown', closeOnEscape);
     }
   }
-
-  document.addEventListener('keydown', closeOnEscape);
 }
 
 function getModalContent(type) {
@@ -85,7 +96,7 @@ function getModalContent(type) {
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg class="work-icon">
-            <use  href='${sprite}#icon-close'></use>
+            <use  href='${spriteWork}#icon-close'></use>
           </svg>
         </button>
         <h3 class="work-modal-title">Thank you for your interest in cooperation!</h3>
@@ -97,7 +108,7 @@ function getModalContent(type) {
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
           <svg class="work-icon">
-            <use  href='${sprite}#icon-close'></use>
+            <use  href='${spriteWork}#icon-close'></use>
           </svg>
         </button>
         <h3 class="work-modal-title"><span class="work-modal-span-erorr">Oops!</span> Something went wrong.</h3>
