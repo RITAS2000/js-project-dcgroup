@@ -15,7 +15,7 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-.swiper-slide {
+.reviews-swiper-slide {
   padding: 32px 24px 0px 24px;
   margin-bottom: 32px;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -29,6 +29,8 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 32px;
+
+
 }
 
 .review-avatar {
@@ -55,9 +57,29 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 4px;
+  word-wrap: break-word;
+
 }
 
-.buttons-wrapper {
+/*Стилізація скрола*/
+.review-item::-webkit-scrollbar {
+  width: 6px;
+}
+
+.review-item::-webkit-scrollbar-thumb {
+  background-color: rgba(250, 250, 250, 0.2);
+  border-radius: 4px;
+}
+
+.review-item::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.buttons-wrapper-reviews {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -122,9 +144,6 @@
   fill: rgba(250, 250, 250, 0.2);
 }
 
-.swiper-button-icon .active {
-  fill: #fafafa;
-}
 
 .swiper-button-next .swiper-button-icon {
   transform: scaleX(-1);
