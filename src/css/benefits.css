@@ -1,0 +1,121 @@
+.section-benefits {
+  margin: auto;
+  background-color: #1c1d20;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.h2-benefits {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+.right-content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.ul-benefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-left: auto;
+  margin-bottom: 16px;
+}
+.li-benefits {
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 344px;
+  height: 270px;
+  background: #242527;
+  justify-self: center;
+}
+.icon-wripper {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: #ed3b44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.h3-li {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+.text-li {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.buttton-benefits {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 18px 36px;
+  background-color: #1c1d20;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: block;
+}
+
+.buttton-benefits:hover,
+.button-benefits:focus {
+  transform: scale(1.02);
+  background-color: #e0373f;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-benefits {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .right-content {
+    display: flex;
+  }
+  .ul-benefits {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 64px;
+  }
+  .li-benefits {
+    border-radius: 20px;
+    padding: 24px;
+    max-width: 344px;
+    height: 270px;
+    background: #242527;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section-benefits {
+    padding-top: 82px;
+    padding-bottom: 82px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .li-benefits {
+    max-width: 332px;
+  }
+}
