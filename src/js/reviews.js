@@ -30,7 +30,7 @@ async function renderReviews() {
     reviewsList.innerHTML = reviews
       .map(
         review =>
-          `<li class="swiper-slide">
+          `<li class="reviews-swiper-slide swiper-slide">
           <div class="review-card">
             <img
               class="review-avatar"
@@ -56,7 +56,7 @@ renderReviews();
 // Ініціалізація та налаштування Swiper //
 
 function initSwiper() {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.reviews-swiper', {
     modules: [Navigation, Keyboard],
     //кількість видимих слайдів
     slidesPerView: 'auto',

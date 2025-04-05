@@ -5,8 +5,7 @@
 
 .reviews-title {
   margin-bottom: 32px;
-  font-family: "Inter Tight",
-    sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -15,7 +14,7 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-.swiper-slide {
+.reviews-swiper-slide {
   padding: 32px 24px 0px 24px;
   margin-bottom: 32px;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -39,7 +38,7 @@
 }
 
 .avatar-name {
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
@@ -49,7 +48,7 @@
 }
 
 .review-item {
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -63,7 +62,6 @@
   justify-content: center;
   flex-direction: row;
   gap: 12px;
-
 }
 
 .swiper-button-prev {
@@ -90,8 +88,6 @@
   }
 }
 
-
-
 .swiper-button-next {
   display: flex;
   align-items: center;
@@ -115,8 +111,6 @@
     fill: rgba(250, 250, 250, 0.5);
   }
 }
-
-
 
 .swiper-button-icon {
   fill: rgba(250, 250, 250, 0.2);
