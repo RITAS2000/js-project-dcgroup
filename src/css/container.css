@@ -3,7 +3,6 @@
   min-width: 288px;
   max-width: 343px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
 /* Styles for Tablet devices */
@@ -19,4 +18,10 @@
     max-width: 1376px;
     
   }
+}
+@media (max-width: 374px) {
+  .container {
+    padding: 0 16px;
+  }
+  
 }
