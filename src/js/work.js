@@ -6,18 +6,14 @@ const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
 const message = document.querySelector('.js-input-message');
 
-if (input.value !== '') {
-  input.addEventListener('input', inputMassege);
-} else {
-  input.removeEventListener('input', inputMassege);
-}
-
-// input.addEventListener('input', inputMassege);
+input.addEventListener('input', inputMassege);
 
 function inputMassege() {
   if (!input.value.trim()) {
     message.style.visibility = 'hidden';
     input.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
+    input.removeEventListener('input', inputMassege);
+    form.removeEventListener('submit', sendPost);
   } else if (input.checkValidity()) {
     message.textContent = 'Succes!';
     message.classList.remove('error');
@@ -33,7 +29,9 @@ function inputMassege() {
   }
 }
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', sendPost);
+
+function sendPost(event) {
   event.preventDefault();
   const email = document.querySelector('input[type="email"]').value.trim();
   const text = document.querySelector('input[type="text"]').value.trim();
@@ -60,7 +58,7 @@ form.addEventListener('submit', function (event) {
     .catch(error => {
       showModal('error');
     });
-});
+}
 
 function showModal(type) {
   const modalContent = getModalContent(type);
@@ -70,21 +68,26 @@ function showModal(type) {
   document.body.style.overflow = 'hidden';
 
   const closeButton = instance.element().querySelector('.work-close-btn');
-  closeButton.addEventListener('click', () => {
+  closeButton.addEventListener('click', instanceClose);
+
+  function instanceClose() {
     instance.close();
     document.body.style.overflow = '';
-  });
+    closeButton.removeEventListener('click', instanceClose);
+    document.removeEventListener('keydown', closeOnEscape);
+  }
+
+  document.addEventListener('keydown', closeOnEscape);
 
   function closeOnEscape(event) {
     if (event.key === 'Escape') {
       document.activeElement.blur();
       instance.close();
       document.body.style.overflow = '';
+      closeButton.removeEventListener('click', instanceClose);
       document.removeEventListener('keydown', closeOnEscape);
     }
   }
-
-  document.addEventListener('keydown', closeOnEscape);
 }
 
 function getModalContent(type) {
