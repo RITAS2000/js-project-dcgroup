@@ -1,3 +1,1 @@
-js-project-dcgroup - тут буде посилання на нашу презентацію
-
-<!-- [Our presentation](https://docs.google.com/presentation/d/1sxenkF6NWqL-CpDCaq_Z7LkPG27TBoWyviuE-9Wut0s/edit?usp=sharing) -->
+[Our presentation](https://docs.google.com/presentation/d/1tmyi_fzc9Lhqh4YUEm8_QUtOrpRffDDBmE5ve2aYr2E/edit?usp=sharing)
