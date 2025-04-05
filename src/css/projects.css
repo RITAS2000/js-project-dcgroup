@@ -270,12 +270,20 @@
   }
 }
 
+
 .icon {
-  width: 25px;
+  width: 24px;
   height: 24px;
   fill: none;
   pointer-events: none;
   transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .icon-wrapper.disabled {
