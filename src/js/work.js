@@ -1,6 +1,6 @@
-// import axios from 'axios';
-// import * as basicLightbox from 'basiclightbox';
-// import sprite from './img/sprite.svg';
+import axios from 'axios';
+import * as basicLightbox from 'basiclightbox';
+import sprite from '../img/sprite.svg';
 
 // const form = document.querySelector('.work-form');
 // const input = document.querySelector('.work-input');
