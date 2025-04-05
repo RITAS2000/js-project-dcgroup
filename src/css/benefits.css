@@ -1,20 +1,11 @@
 .section-benefits {
-  /* display: flex; */
   margin: auto;
-  /* text-align: left; */
   background-color: #1c1d20;
-  /* justify-content: space-between;
-  align-items: flex-start; */
   box-sizing: border-box;
-  /* display: flex; */
-  /* flex: 0 0 auto;
-  flex-direction: column; */
-  /* gap: 32px; */
-  /* align-items: flex-start; */
-  /* justify-content: flex-start; */
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .h2-benefits {
   box-sizing: border-box;
   flex: 0 0 auto;
@@ -25,27 +16,14 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
-  /* flex: 1; */
   margin-bottom: 32px;
 }
 .right-content {
-  /* flex: 2; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: flex-end; */
   align-items: flex-end;
 }
 .ul-benefits {
-  /* flex-wrap: wrap;
-  list-style: none;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px; */
   display: grid;
-  grid-template-columns: 1fr; /* Одна колонка по умолчанию */
+  grid-template-columns: 1fr;
   gap: 16px;
   margin-left: auto;
 }
@@ -55,7 +33,6 @@
   max-width: 344px;
   height: 270px;
   background: #242527;
-  /* width: calc(50% - 8px); */
 }
 .icon-wripper {
   border-radius: 10px;
@@ -87,10 +64,8 @@
   color: rgba(250, 250, 250, 0.6);
 }
 .button-wrapper {
-  /* width: calc(50% - 8px); */
   align-self: flex-start;
   margin-top: 16px;
-  /* margin-left: auto; */
 }
 .buttton-benefits {
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -116,9 +91,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 704px;
-  }
   .section-benefits {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -127,10 +99,6 @@
     display: flex;
   }
   .ul-benefits {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style: none; */
     grid-template-columns: repeat(2, 1fr);
   }
   .li-benefits {
@@ -141,15 +109,11 @@
     background: #242527;
   }
   .button-wrapper {
-    /* padding-top: 48px; */
     margin-top: 48px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1376px;
-  }
   .section-benefits {
     padding-top: 82px;
     padding-bottom: 82px;
