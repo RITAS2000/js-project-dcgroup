@@ -1,8 +1,4 @@
-.container {
-  background: #1c1d20;
-  font-family: 'Inter Tight', sans-serif;
-  margin: 0 auto;
-}
+
 .faq-title {
   font-weight: 600;
   font-size: 16px;
@@ -67,7 +63,14 @@ div.faq-item-header .faq-toggle:hover {
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
-
+@media only screen and (min-width: 768px) {
+  .faq-item-content {
+    width: 656px;
+  }
+  .is-active .faq-item-content {
+    margin-top: 26px;
+  }
+}
 .ac .ac-trigger::after {
   display: none;
 }
@@ -87,9 +90,4 @@ div.faq-item-header .faq-toggle:hover {
 }
 .is-active .faq-item-content {
   margin-top: 16px;
-}
-@media only screen and (min-width: 768px) {
-  .is-active .faq-item-content {
-    margin-top: 26px;
-  }
 }
