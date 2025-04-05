@@ -1,6 +1,5 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-// import spriteWork from '../img/sprite.svg';
 
 const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
