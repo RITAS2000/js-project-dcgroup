@@ -1,6 +1,6 @@
 /* Styles for Mobile devices */
 .container {
-  min-width: 320px;
+  min-width: 288px;
   max-width: 343px;
   margin: 0 auto;
 }
@@ -18,4 +18,10 @@
     max-width: 1376px;
     
   }
+}
+@media (max-width: 374px) {
+  .container {
+    padding: 0 16px;
+  }
+  
 }
