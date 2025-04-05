@@ -1,0 +1,155 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  width: 172px;
+  height: 80px;
+}
+
+.logo-img {
+  border-radius: 18px;
+  width: 80px;
+  height: 80px;
+}
+
+.logo-text {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+/* Навігація */
+.nav {
+  position: relative;
+}
+
+.menu-toggle {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fafafa;
+}
+
+/* Dropdown */
+.nav-list {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  width: 67px;
+  height: 91px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-list.show {
+  display: flex;
+}
+
+.nav-link {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+/* Кнопка */
+.order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 60px;
+  padding: 18px 24px;
+  width: 163px;
+  height: 55px;
+  background: #ed3b44;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.order-btn:hover {
+  background: #d33131;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: black;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-link {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+

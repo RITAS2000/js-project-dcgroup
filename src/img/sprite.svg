@@ -14,7 +14,10 @@
       <path fill="none" stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M24.217 2.667H7.783c-.617 0-1.117.5-1.117 1.117a13.4 13.4 0 0 0 3.925 9.475l1.626 1.626c.161.161.242.242.3.32a1.335 1.335 0 0 1 0 1.594c-.058.077-.139.158-.3.32l-1.626 1.626a13.4 13.4 0 0 0-3.925 9.475c0 .617.5 1.117 1.117 1.117h16.434c.617 0 1.117-.5 1.117-1.117a13.4 13.4 0 0 0-3.925-9.475l-1.626-1.626c-.161-.161-.242-.242-.3-.32a1.332 1.332 0 0 1 0-1.594c.058-.077.139-.158.3-.32l1.626-1.626a13.4 13.4 0 0 0 3.925-9.475c0-.617-.5-1.117-1.117-1.117z" style="stroke:var(--color1, #fafafa)"/>
     </symbol>
     <symbol id="icon-close" viewBox="0 0 32 32">
-      <path fill="none" stroke="#fafafa" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M24 8l-16 16M8 8l16 16"/>
+      <!-- <path fill="none" stroke="#fafafa" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M24 8l-16 16M8 8l16 16"/> -->
+      
+  <path d="M16.5 5.5L5.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M5.5 5.5L16.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
     <symbol id="icon-arrow-left" viewBox="0 0 32 32">
       <path fill="none" stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M27.333 16H6M14 24l-8-8 8-8" style="stroke:var(--color1, #fafafa)"/>
@@ -27,6 +30,9 @@
     </symbol>
     <symbol id="icon-arrow-right-reviews" viewBox="0 0 32 32">
       <path d="M18.933 24.948c.227-.047.466-.275 4.393-4.192 2.845-2.839 4.183-4.21 4.252-4.356a.881.881 0 0 0 .018-.768l.002.006c-.105-.255-8.164-8.339-8.475-8.501-.844-.44-1.759.475-1.319 1.32.064.124 1.392 1.491 3.259 3.356l3.151 3.147-19.121.053-.239.134c-.657.368-.657 1.338 0 1.706l.239.134 19.121.053-3.151 3.147c-1.867 1.865-3.195 3.232-3.259 3.356-.237.454-.069 1.062.357 1.29.274.147.475.177.772.115z"/>
+
+    <symbol id="icon-arrow" viewBox="0 0 32 32">
+      <path fill="none" stroke="#fafafa" stroke-width="3.2" d="m24 12-8 8-8-8" style="stroke:var(--color1, #fafafa)"/>
     </symbol>
   </defs>
 </svg>
