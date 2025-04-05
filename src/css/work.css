@@ -108,7 +108,7 @@
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 374px) {
   .work-address {
     flex-direction: column;
   }
