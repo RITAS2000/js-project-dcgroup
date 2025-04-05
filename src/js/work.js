@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
 import spriteWork from '../img/sprite.svg';
@@ -12,8 +13,6 @@ function inputMassege() {
   if (!input.value.trim()) {
     message.style.visibility = 'hidden';
     input.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
-    input.removeEventListener('input', inputMassege);
-    form.removeEventListener('submit', sendPost);
   } else if (input.checkValidity()) {
     message.textContent = 'Succes!';
     message.classList.remove('error');
