@@ -77,23 +77,25 @@ function initSwiper() {
       1440: { slidesPerView: 4, grabCursor: true, spaceBetween: 16 },
     },
     on: {
-      init: function () {
-        updateNavButtons(this);
-      },
       slideChange: function () {
-        updateNavButtons(this);
+        const prevBtn = document.querySelector('.swiper-button-prev');
+        const nextBtn = document.querySelector('.swiper-button-next');
+
+        prevBtn.disabled = this.isBeginning;
+        nextBtn.disabled = this.isEnd;
+
+        if (this.isBeginning) {
+          prevBtn.classList.add('disabled');
+        } else {
+          prevBtn.classList.remove('disabled');
+        }
+
+        if (this.isEnd) {
+          nextBtn.classList.add('disabled');
+        } else {
+          nextBtn.classList.remove('disabled');
+        }
       },
     },
   });
-  //Управління активністю кнопок
-  function updateNavButtons(swiper) {
-    const prevBtn = document.querySelector('.swiper-button-prev');
-    const nextBtn = document.querySelector('.swiper-button-next');
-
-    prevBtn.disabled = swiper.isBeginning;
-    nextBtn.disabled = swiper.isEnd;
-
-    prevBtn.classList.toggle('disabled', swiper.isBeginning);
-    nextBtn.classList.toggle('disabled', swiper.isEnd);
-  }
 }
