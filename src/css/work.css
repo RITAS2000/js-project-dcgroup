@@ -43,6 +43,7 @@
   }
 }
 .responsive-img {
+  
   width: 40px;
 }
 
@@ -244,7 +245,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 @media (min-width: 768px) {
   .work-button {
@@ -260,6 +261,7 @@
 .work-button:hover {
   background: #e0373f;
   transform: scale(1.02);
+  box-shadow: 0 0 12px #f5f5f5;
 }
 
 .work-button:focus {
