@@ -32,5 +32,11 @@
     <symbol id="icon-arrow" viewBox="0 0 32 32">
       <path fill="none" stroke="#fafafa" stroke-width="3.2" d="m24 12-8 8-8-8" style="stroke:var(--color1, #fafafa)"/>
     </symbol>
+    <symbol id="icon-mobile-menu" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M4 11.333h24M4 20.667h24"></path>
+    </symbol>
+    <symbol id="icon-down" viewBox="0 0 32 32">
+     <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 12l-8 8-8-8"></path>
+    </symbol>
   </defs>
 </svg>
