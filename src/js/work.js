@@ -1,6 +1,8 @@
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
 
+let isRequestInProgress = false;
+
 const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
 const message = document.querySelector('.js-input-message');
@@ -30,6 +32,8 @@ form.addEventListener('submit', sendPost);
 
 function sendPost(event) {
   event.preventDefault();
+
+  if (isRequestInProgress) return;
   const email = document.querySelector('input[type="email"]').value.trim();
   const text = document.querySelector('input[type="text"]').value.trim();
 
@@ -39,6 +43,8 @@ function sendPost(event) {
   };
 
   const url = 'https://portfolio-js.b.goit.study/api-docs/reqests';
+
+  isRequestInProgress = true;
 
   axios
     .post(url, data, {
@@ -54,6 +60,9 @@ function sendPost(event) {
     })
     .catch(error => {
       showModal('error');
+    })
+    .finally(() => {
+      isRequestInProgress = false;
     });
 }
 

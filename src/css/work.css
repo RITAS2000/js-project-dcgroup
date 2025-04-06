@@ -8,15 +8,6 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
 }
-/* .work-section .container {
-  padding: 0 16px;
-}
-
-@media (min-width: 768px) {
-  .work-section .container {
-    padding: 0;
-  }
-} */
 
 @media (min-width: 1440px) {
     .work-section .container {
@@ -43,7 +34,7 @@
   }
 }
 .responsive-img {
-  
+  user-select: none;
   width: 40px;
 }
 
