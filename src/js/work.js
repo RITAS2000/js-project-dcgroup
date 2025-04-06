@@ -1,13 +1,15 @@
-
 import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
-import sprite from '../img/sprite.svg';
+
+let isRequestInProgress = false;
 
 const form = document.querySelector('.work-form');
 const input = document.querySelector('.work-input');
 const message = document.querySelector('.js-input-message');
 
-input.addEventListener('input', function () {
+input.addEventListener('input', inputMassege);
+
+function inputMassege() {
   if (!input.value.trim()) {
     message.style.visibility = 'hidden';
     input.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
@@ -24,10 +26,14 @@ input.addEventListener('input', function () {
     message.style.visibility = 'visible';
     input.style.borderBottom = '1px solid #e74a3b';
   }
-});
+}
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', sendPost);
+
+function sendPost(event) {
   event.preventDefault();
+
+  if (isRequestInProgress) return;
   const email = document.querySelector('input[type="email"]').value.trim();
   const text = document.querySelector('input[type="text"]').value.trim();
 
@@ -37,6 +43,8 @@ form.addEventListener('submit', function (event) {
   };
 
   const url = 'https://portfolio-js.b.goit.study/api-docs/reqests';
+
+  isRequestInProgress = true;
 
   axios
     .post(url, data, {
@@ -52,8 +60,11 @@ form.addEventListener('submit', function (event) {
     })
     .catch(error => {
       showModal('error');
+    })
+    .finally(() => {
+      isRequestInProgress = false;
     });
-});
+}
 
 function showModal(type) {
   const modalContent = getModalContent(type);
@@ -63,21 +74,26 @@ function showModal(type) {
   document.body.style.overflow = 'hidden';
 
   const closeButton = instance.element().querySelector('.work-close-btn');
-  closeButton.addEventListener('click', () => {
+  closeButton.addEventListener('click', instanceClose);
+
+  function instanceClose() {
     instance.close();
     document.body.style.overflow = '';
-  });
+    closeButton.removeEventListener('click', instanceClose);
+    document.removeEventListener('keydown', closeOnEscape);
+  }
+
+  document.addEventListener('keydown', closeOnEscape);
 
   function closeOnEscape(event) {
     if (event.key === 'Escape') {
       document.activeElement.blur();
       instance.close();
       document.body.style.overflow = '';
+      closeButton.removeEventListener('click', instanceClose);
       document.removeEventListener('keydown', closeOnEscape);
     }
   }
-
-  document.addEventListener('keydown', closeOnEscape);
 }
 
 function getModalContent(type) {
@@ -85,9 +101,10 @@ function getModalContent(type) {
     return `
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
-          <svg class="work-icon">
-            <use  href='${sprite}#icon-close'></use>
-          </svg>
+        <svg  class="work-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.5 5.5L5.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M5.5 5.5L16.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg> 
         </button>
         <h3 class="work-modal-title">Thank you for your interest in cooperation!</h3>
         <p class="work-modal-text">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
@@ -97,9 +114,10 @@ function getModalContent(type) {
     return `
       <div class="work-modal-sucssec">
         <button type="button" class="work-close-btn">
-          <svg class="work-icon">
-            <use  href='${sprite}#icon-close'></use>
-          </svg>
+            <svg  class="work-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.5 5.5L5.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M5.5 5.5L16.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
         </button>
         <h3 class="work-modal-title"><span class="work-modal-span-erorr">Oops!</span> Something went wrong.</h3>
         <p class="work-modal-text">Please try again later.</p>
@@ -107,4 +125,3 @@ function getModalContent(type) {
     `;
   }
 }
-

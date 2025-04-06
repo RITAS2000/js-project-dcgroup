@@ -55,3 +55,4 @@ function initAboutSwiper() {
 
 // Викликаємо функцію ініціалізації Swiper після завантаження DOM
 document.addEventListener('DOMContentLoaded', initAboutSwiper);
+
