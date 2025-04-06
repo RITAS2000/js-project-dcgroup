@@ -38,7 +38,7 @@
 .reviews-swiper-slide:hover {
   border: 1px solid #e0373f;
   box-shadow: 0 0 12px #e0373f;
-  transform: scale(1.02);
+  transform: scale(1.05);
   z-index: 10;
 }
 
