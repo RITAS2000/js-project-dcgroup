@@ -43,12 +43,12 @@
   }
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   position: relative;
   height: 100%;
-}
+} */
 
 .hero-title {
   color: #fafafa;
