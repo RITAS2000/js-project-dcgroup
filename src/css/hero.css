@@ -49,6 +49,10 @@
   height: 100%;
 }
 
+#hero-first-word {
+  display: block;
+}
+
 .hero-title {
   color: #fafafa;
   font-size: 50px;
