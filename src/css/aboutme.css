@@ -1,8 +1,49 @@
+.about-swiper {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.about-swiper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.about-swiper li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  background-color: #ffccbc;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-swiper li:hover {
+  transform: scale(1.05);
+}
+
+.about-swiper li:focus {
+  outline: 3px solid #ff5722;
+  outline-offset: 4px;
+}
+
+/** -- **/
 .about-me-wrapper {
   background-color: #1c1d20;
   color: #fafafa;
   font-size: 16px;
-  padding: 0 34px;
+  padding: 0 16px;
   border-radius: 18px 24px 0 0;
   font-weight: 500;
 }
@@ -35,6 +76,8 @@
   color: #ed3b44;
 }
 
+/****/
+
 .ac {
   margin-bottom: 0 !important;
   border: none !important;
@@ -56,6 +99,7 @@
   border-left: none;
   border-right: none;
 }
+
 .wrap-item:first-child {
   border-top: none;
 }
@@ -79,24 +123,23 @@
 }
 
 .icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 12px;
-  width: 36px;
-  height: 36px;
-  background-color: transparent;
+  border-radius: 100px;
+  padding: 7px;
+  width: 34px;
+  height: 34px;
+  background: #1c1d20;
+  display: flex;
+  text-align: center;
+  transition: border-color 0.3s ease;
 }
 
-.about-me-arrow {
+.icon-wrapper .about-me-arrow {
   display: inline-flex;
   position: relative;
   background-color: transparent;
-  transition: transform 0.5s ease-out;
-  transform: rotate(0deg);
   transform-origin: center;
+  transition: transform 0.3s ease;
 }
 
 /* Коли картка активна — обертаємо стрілку */
@@ -112,6 +155,21 @@
   visibility: visible;
 }
 
+.about-swiper li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  background-color: #ed3b44;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
 .about-cart {
   font-family: 'Inter Tight', sans-serif;
   overflow: hidden;
@@ -120,123 +178,30 @@
 .about-text:first-child {
   overflow: visible;
 }
+
 .about-text {
   transition: max-height 0.6s ease;
   border-top: none;
 }
 
-.about-sw {
-  position: relative; /* Для позиціонування стрілок */
-  width: 100%; /* Або задайте потрібну ширину */
-  height: auto; /* Або задайте потрібну висоту */
-  overflow: hidden; /* Маскуємо слайди, що виходять за межі */
-  background-color: #222; /* Темний фон, як на зображенні */
-  padding: 20px 0; /* Додамо трохи відступів зверху та знизу */
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center; /* Вертикальне центрування слайдів */
-  transition-property: transform;
-  box-sizing: content-box;
-}
-
-.swiper-slide {
-  width: auto; /* Щоб ширина слайдів залежала від контенту */
-  height: auto;
-  margin-right: 20px; /* Відступ між слайдами */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-cart .about-slide,
-.about-sw .bout-slide {
-  width: 40px; /* Задаємо однаковий розмір круглих елементів */
-  height: 40px;
-  border-radius: 50%; /* Робимо елементи круглими */
-  color: #fff; /* Білий текст */
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #fff; /* Біла обводка */
-  background-color: transparent; /* Прозорий фон за замовчуванням */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.about-slide {
-  background-color: #e63946; /* Червоний фон для активного елемента */
-  border-color: #e63946; /* Червона обводка для активного елемента */
-}
-
-/* Стилі для неактивних (bout-slide) елементів при наведенні */
-.bout-slide:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Легке затемнення при наведенні */
-}
-
-/* Стилі для стрілок навігації */
-.about-swip-arrow-prev,
-.about-swip-arrow-next {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 10;
-  transform: translateY(-50%);
-  transition: background-color 0.3s ease;
-}
-
-.about-swip-arrow-prev {
-  left: 10px;
-}
-
-.about-swip-arrow-next {
-  right: 10px;
-}
-
-.about-swip-arrow-prev::before {
-  content: '←'; /* Або використайте іконку */
-}
-
-.about-swip-arrow-next::before {
-  content: '→'; /* Або використайте іконку */
-}
-
-.about-swip-arrow-prev:hover,
-.about-swip-arrow-next:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Приховуємо стандартні крапки пагінації Swiper */
-.swiper-pagination {
-  display: none !important;
-}
-
-@media screen and (min-width: 375px) {
-}
-@media screen and (min-width: 768px) {
-  .motto {
-    margin-bottom: 60px;
+@media (max-width: 374px) {
+  .about-me-wrapper {
+    padding: 0 16px;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
+  .about-me-wrapper {
+    padding: 0 34px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
   .motto {
-    margin-bottom: 94px;
+    flex-direction: row;
+  }
+  .wrap-item {
+    flex-direction: row;
   }
 }
