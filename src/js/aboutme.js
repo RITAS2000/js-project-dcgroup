@@ -1,14 +1,12 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-// core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
+// Ініціалізація акордеону
 const aboutMeAccordion = new Accordion('.accordion-containerX', {
   duration: 400,
   elementClass: 'wrap-item',
@@ -17,51 +15,60 @@ const aboutMeAccordion = new Accordion('.accordion-containerX', {
 });
 aboutMeAccordion.open(0);
 
+// Клас для активного кружечка
+const aboutActiveClass = 'highlighted-slide';
+
 function initAboutSwiper() {
-  new Swiper('.about-swiper', {
+  const swiper = new Swiper('.about-swiper', {
     modules: [Navigation],
     slidesPerView: 'auto',
-    spaceBetween: 20,
+    spaceBetween: 0,
     loop: true,
-    centeredSlides: true,
+    centeredSlides: false,
+    touchRatio: 1,
+    initialSlide: 0,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
     navigation: {
       nextEl: '.about-swip-arrow-next',
-      prevEl: '.about-swip-arrow-prev',
+      prevEl: '.about-swip-arrow-prev', // якщо є стрілка назад
     },
     grabCursor: true,
     on: {
       init: function () {
-        addClickHandlersToAboutSlides();
+        highlightActiveSlide(this);
       },
-      loopFix: function () {
-        addClickHandlersToAboutSlides();
+      slideChange: function () {
+  highlightActiveSlide(this);
+},
+      resize: function () {
+        highlightActiveSlide(this);
       },
     },
   });
 }
 
-// Активний клас для підсвічування слайда
-const aboutActiveClass = 'highlighted-slide';
+function highlightActiveSlide(swiper) {
+  const slides = swiper.slides;
+  slides.forEach(slide => slide.classList.remove(aboutActiveClass));
 
-function addClickHandlersToAboutSlides() {
-  const slides = document.querySelectorAll('.about-swiper .swiper-slide');
-  slides.forEach(slide => {
-    slide.removeEventListener('click', handleSlideClick);
-    slide.addEventListener('click', handleSlideClick);
+  // Отримуємо активний індекс
+  const realIndex = swiper.realIndex;
+
+  // Знаходимо перший слайд з таким же realIndex і без класу дублікату
+  const targetSlide = Array.from(slides).find(slide => {
+    return (
+      Number(slide.dataset.swiperSlideIndex) === realIndex &&
+      !slide.classList.contains('swiper-slide-duplicate')
+    );
   });
+
+  if (targetSlide) {
+    targetSlide.classList.add(aboutActiveClass);
+  }
 }
 
-function handleSlideClick(e) {
-  const clickedSlide = e.currentTarget;
-  document.querySelectorAll('.about-swiper .swiper-slide').forEach(slide => {
-    slide.classList.remove(aboutActiveClass);
-  });
-  clickedSlide.classList.add(aboutActiveClass);
-}
 
-// Запускаємо після завантаження DOM
 document.addEventListener('DOMContentLoaded', initAboutSwiper);

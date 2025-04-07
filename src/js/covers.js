@@ -28,10 +28,8 @@ if (coversSection) {
   const observerCovers = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        console.log('Section is in view');
         coversSection.classList.add('animate');
       } else {
-        console.log('Section is out of view');
         coversSection.classList.remove('animate');
       }
     });
