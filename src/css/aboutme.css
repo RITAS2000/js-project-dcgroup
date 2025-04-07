@@ -119,109 +119,105 @@
   border-top: none;
 }
 
-.highlighted-slide {
-  background-color: #ed3b44;
-  color: #fff;
-  box-shadow: 0 2px 12px #ed3b44;
-  transform: scale(1.05);
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 43px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 32px;
 }
 
-.about-swiper {
-  position: relative;
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .about-section {
+    padding-top: 64px;
+    gap: 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-section {
+    padding: 96px 32px 0 32px;
+    gap: 72px;
+  }
+}
+
+.circles-wrapper {
+  flex: 1 1 auto;
   overflow: hidden;
 }
 
-.about-swiper ul.swiper-wrapper {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+.circles-wrapper .swiper-slide {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
 
-.about-swiper li.swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  padding: 0;
-  background-color: transparent;
   color: #fafafa;
-  border: 1px solid #fafafa;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  margin: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-/* Highlight the active (centered) slide */
-.about-swiper li.swiper-slide.swiper-slide-active {
-  background-color: #f44336; /* red */
-  border: none;
-  color: white;
-}
-
-/*
-li.about-swiper .ab {
-  border-radius: 50%;
-  border: 1px solid 3b3b3b;
-}
-*/
-
-/* .about-swiper ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-
-.about-swiper li:focus {
-  outline: 3px solid #ff5722;
-  outline-offset: 4px;
-} */
-
-/* Стилізація іконок стрілок */
-.about-icon-left,
-.about-icon-right {
-  width: 24px;
-  height: 24px;
-  fill: white; /* Колір іконки */
-}
-
-.about-swip-arrow-prev,
-.about-swip-arrow-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.about-swip-arrow-prev {
-  left: 10px; /* Відстань від лівого краю */
-}
-
-.about-swip-arrow-next {
-  right: 10px; /* Відстань від правого краю */
-}
-
-.about-me-wrapper {
-  background-color: #1c1d20;
-  color: #fafafa;
-  font-size: 16px;
-  border-radius: 18px 24px 0 0;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
 }
 
-@media (max-width: 374px) {
+@media screen and (min-width: 768px) {
+  .circles-wrapper .swiper-slide {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+}
+
+.circles-wrapper .swiper-slide.highlighted-slide {
+  background-color: #ed3b44;
+  border: none;
+  color: #fafafa;
+}
+
+/*.circles-wrapper .swiper-slide:hover,
+.circles-wrapper .swiper-slide:focus {
+  background-color: #ed3b44;
+  border: none;
+  color: #fafafa;
+}
+  */
+
+.arrow-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.arrow-wrapper:hover,
+.arrow-wrapper:focus {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.about-swip-arrow-next {
+  cursor: pointer;
+}
+
+.about-icon-right {
+  width: 28px;
+  height: 28px;
+  filter: brightness(5) saturate(0) opacity(0.2);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-icon-right {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
