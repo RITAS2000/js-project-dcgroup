@@ -18,18 +18,49 @@ const aboutMeAccordion = new Accordion('.accordion-containerX', {
 aboutMeAccordion.open(0);
 
 function initAboutSwiper() {
-  const aboutSwiper = new Swiper('.about-swiper', {
+  new Swiper('.about-swiper', {
     modules: [Navigation],
     slidesPerView: 'auto',
-    spaceBetween: 20, // Додамо відстань між слайдами
-
-    // Навігаційні стрілки
+    spaceBetween: 20,
+    loop: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
     navigation: {
       nextEl: '.about-swip-arrow-next',
       prevEl: '.about-swip-arrow-prev',
     },
+    grabCursor: true,
+    on: {
+      init: function () {
+        addClickHandlersToAboutSlides();
+      },
+      loopFix: function () {
+        addClickHandlersToAboutSlides();
+      },
+    },
   });
 }
 
-// Викликаємо функцію ініціалізації Swiper після завантаження DOM
+// Активний клас для підсвічування слайда
+const aboutActiveClass = 'highlighted-slide';
+
+function addClickHandlersToAboutSlides() {
+  const slides = document.querySelectorAll('.about-swiper .swiper-slide');
+  slides.forEach(slide => {
+    slide.removeEventListener('click', handleSlideClick);
+    slide.addEventListener('click', handleSlideClick);
+  });
+}
+
+function handleSlideClick(e) {
+  const clickedSlide = e.currentTarget;
+  document.querySelectorAll('.about-swiper .swiper-slide').forEach(slide => {
+    slide.classList.remove(aboutActiveClass);
+  });
+  clickedSlide.classList.add(aboutActiveClass);
+}
+
+// Запускаємо після завантаження DOM
 document.addEventListener('DOMContentLoaded', initAboutSwiper);
