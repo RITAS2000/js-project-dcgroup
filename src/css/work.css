@@ -157,7 +157,12 @@
   color: #fafafa;
   text-overflow: ellipsis;
   padding-bottom: 26px;
-}
+  transition: border 0.3s ease;
+  }
+  
+  .work-input:hover {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5)
+  }
 .work-position-sucsses {
   display: flex;
   flex-direction: column;
