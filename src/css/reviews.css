@@ -38,8 +38,6 @@
 
 .reviews-swiper-slide:hover {
   border: 1px solid #e0373f;
-  box-shadow: 0 0 12px #e0373f;
-
   z-index: 10;
 }
 
