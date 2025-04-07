@@ -23,6 +23,7 @@ function initAboutSwiper() {
     slidesPerView: 'auto',
     spaceBetween: 20,
     loop: true,
+    centeredSlides: true,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
