@@ -1,34 +1,67 @@
 import Accordion from 'accordion-js';
-import "accordion-js/dist/accordion.min.css";
-// import Swiper from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
+import 'accordion-js/dist/accordion.min.css';
 
+// core version + navigation, pagination modules:
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-// Initialisiere accordion-js
-const accordionItems = document.querySelectorAll('.accordion-item');
-const accordionContent = document.querySelectorAll('.accordion-content');
+const aboutMeAccordion = new Accordion('.accordion-containerX', {
+  duration: 400,
+  elementClass: 'wrap-item',
+  triggerClass: 'icon-wrapper',
+  panelClass: 'about-cart',
+});
+aboutMeAccordion.open(0);
 
+function initAboutSwiper() {
+  new Swiper('.about-swiper', {
+    modules: [Navigation],
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    loop: true,
+    centeredSlides: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    navigation: {
+      nextEl: '.about-swip-arrow-next',
+      prevEl: '.about-swip-arrow-prev',
+    },
+    grabCursor: true,
+    on: {
+      init: function () {
+        addClickHandlersToAboutSlides();
+      },
+      loopFix: function () {
+        addClickHandlersToAboutSlides();
+      },
+    },
+  });
+}
 
-accordionItems.forEach(item =>
-    item.addEventListener("click", () => {
-        const activeContent = document.querySelector('#' + item.dataset.tab);
+// Активний клас для підсвічування слайда
+const aboutActiveClass = 'highlighted-slide';
 
-        if (activeContent.classList.contains("active")) {
-            activeContent.classList.remove("active");
-        } else {
-            accordionContent.forEach(element => {
-                element.classList.remove("active");
-                element.style.maxHeight = '0';
-            });
+function addClickHandlersToAboutSlides() {
+  const slides = document.querySelectorAll('.about-swiper .swiper-slide');
+  slides.forEach(slide => {
+    slide.removeEventListener('click', handleSlideClick);
+    slide.addEventListener('click', handleSlideClick);
+  });
+}
 
-            accordionItems.forEach(element => element.classList.remove("active"));
+function handleSlideClick(e) {
+  const clickedSlide = e.currentTarget;
+  document.querySelectorAll('.about-swiper .swiper-slide').forEach(slide => {
+    slide.classList.remove(aboutActiveClass);
+  });
+  clickedSlide.classList.add(aboutActiveClass);
+}
 
-            item.classList.add('active');
-            activeContent.classList.add('active');
-            activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
-       }
-
-    })
-
-);
+// Запускаємо після завантаження DOM
+document.addEventListener('DOMContentLoaded', initAboutSwiper);

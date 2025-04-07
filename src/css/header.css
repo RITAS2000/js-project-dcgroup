@@ -1,84 +1,170 @@
+/* Smooth scrolling for all anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Header styling: Fixed at the top with transparent background */
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
+  background-color: transparent;
+  z-index: 999;
 }
 
-/* Logo */
+/* Header wrapper: Grid container for logo, navigation, and order button */
+.header-wrapper {
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Logo | Navigation | Order button or Burger */
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* На мобільних пристроях: Змінюємо grid для правильного вирівнювання */
+@media only screen and (max-width: 767.98px) {
+  .header-wrapper {
+    grid-template-columns: auto 1fr; /* Logo | Burger (правий край) */
+    justify-content: space-between; /* Розташовуємо логотип зліва, бургер справа */
+  }
+  .open-menu-btn {
+    justify-self: end; /* Явно вирівнюємо бургер-меню по правому краю */
+  }
+}
+
+/* Logo styling: Flex container with image and text, scales on hover */
 .logo {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
   gap: 8px;
-  width: 172px;
-  height: 80px;
+  align-items: flex-start;
+  justify-content: center;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.logo-img {
-  border-radius: 18px;
+.logo:hover,
+.logo:focus {
+  scale: 1.02;
+}
+.logo img {
   width: 80px;
   height: 80px;
 }
-
 .logo-text {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   font-size: 20px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
-}
-
-/* Навігація */
-.nav {
-  position: relative;
-}
-
-.menu-toggle {
-  font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #fafafa;
+  letter-spacing: -0.025em;
 }
 
-/* Dropdown */
-.nav-list {
-  position: absolute;
-  top: 120%;
-  right: 0;
+/* Navigation block: Hidden by default, centered on tablet/desktop */
+.navigation {
+  display: none;
+  justify-self: center; /* Center the navigation block within its grid column */
+}
+@media only screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center; /* Center the contents (menu and navi) horizontally */
+  }
+}
+
+/* Menu toggle: Clickable text to show/hide navigation on tablet/desktop */
+.menu {
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.menu:hover,
+.menu:focus {
+  transform: scale(1.07);
+  color: var(--change-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navigation links container: Hidden by default, fades in when open */
+.navi {
+  display: none;
+  opacity: 0;
+  transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navi.is-open {
+  display: block;
+  opacity: 1;
+}
+@starting-style {
+  .navi.is-open {
+    opacity: 0;
+  }
+}
+
+/* Navigation list: Centered column of links */
+.nav-wrapper {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation item: Scales on hover */
+.nav-item {
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-item:hover,
+.nav-item:focus {
+  transform: scale(1.07);
+}
+
+/* Navigation link: White text with hover color change */
+.nav-link {
+  color: #fafafa;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--change-color);
+}
+
+/* Burger menu button: Visible on mobile, scales on hover */
+.open-menu-btn {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 5px;
-  width: 67px;
-  height: 91px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.open-menu-btn:hover,
+.open-menu-btn:focus {
+  transform: scale(1.07);
+}
+@media only screen and (min-width: 768px) {
+  .open-menu-btn {
+    display: none;
+  }
 }
 
-.nav-list.show {
-  display: flex;
+.burger-menu {
+  stroke: #fafafa;
 }
 
-.nav-link {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
-}
-
-/* Кнопка */
-.order-btn {
+/* Order link: Styled button, hidden on mobile */
+.order-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,67 +175,120 @@
   width: 163px;
   height: 55px;
   background: #ed3b44;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
-}
-
-.order-btn:hover {
-  background: #d33131;
-}
-
-/* Бургер */
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  background: none;
   border: none;
-  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 1px #ed3b44, 0 0 5px #ed3b44;
+  transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.order-link:hover,
+.order-link:focus {
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
+    0 0 10px var(--change-color), 0 0 15px var(--change-color),
+    0 0 20px var(--change-color);
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #F5F5F5;
+}
+@media only screen and (max-width: 767.98px) {
+  .order-link {
+    display: none;
+  }
 }
 
-/* Mobile menu */
-.mobile-menu {
+/* Modal backdrop: Full-screen overlay with slide-in animation */
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
-  background: black;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transform: translateX(0);
+  z-index: 1000;
+}
+
+/* Modal content: Centered full-screen container */
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  background-image: url('../img/hero/hero-mobile@1x.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%) scale(1);
+}
+@media only screen and (max-width: 374.98px) and (min-resolution: 192dpi) {
+  .modal {
+    background-image: url('../img/hero/hero-mobile@2x.png');
+  }
+}
+
+/* Close button: Positioned in the top-right corner of the modal */
+.modal-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  transform: scale(1.07);
+}
+.close-icon {
+  stroke: #fafafa;
+}
+
+/* Modal navigation: Centered list of links */
+.navi-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navi-modal-wrapper {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  gap: 12px;
 }
 
-.mobile-menu.active {
-  display: flex;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 32px;
+/* Modal navigation link: Underlined text with hover color change */
+.navi-modal-link {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
   cursor: pointer;
 }
-
-.mobile-nav {
-  list-style: none;
-  text-align: center;
+.navi-modal-link:hover,
+.navi-modal-link:focus {
+  color: var(--change-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.mobile-link {
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-  margin: 16px 0;
-}
-
-
