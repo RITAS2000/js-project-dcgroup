@@ -1,22 +1,16 @@
-const coversSection = document.querySelector('#covers');
-
 document.addEventListener('DOMContentLoaded', () => {
   const wrappers = document.querySelectorAll('.covers-list-wrapper');
   wrappers.forEach(wrapper => {
     const list = wrapper.querySelector('.covers-list');
-    const items = Array.from(list.children);
-    if (items.length > 0) {
-      const lastItemHTML = items[items.length - 1].outerHTML;
-
-      const remainingItemsHTML = items
-        .slice(0, items.length - 1)
-        .map(item => item.outerHTML)
-        .join('');
-
-      list.innerHTML += lastItemHTML + remainingItemsHTML;
+    if (list) {
+      const clone = list.cloneNode(true);
+      clone.classList.add('duplicate');
+      wrapper.appendChild(clone);
     }
   });
 });
+
+const coversSection = document.querySelector('#covers');
 
 if (coversSection) {
   const optionsCovers = {

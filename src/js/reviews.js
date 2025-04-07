@@ -63,8 +63,8 @@ function initSwiper() {
 
     //Стрілки
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next-1',
+      prevEl: '.swiper-button-prev-1',
     },
     keyboard: {
       enabled: true,
@@ -78,8 +78,8 @@ function initSwiper() {
     },
     on: {
       slideChange: function () {
-        const prevBtn = document.querySelector('.swiper-button-prev');
-        const nextBtn = document.querySelector('.swiper-button-next');
+        const prevBtn = document.querySelector('.swiper-button-prev-1');
+        const nextBtn = document.querySelector('.swiper-button-next-1');
 
         prevBtn.disabled = this.isBeginning;
         nextBtn.disabled = this.isEnd;
