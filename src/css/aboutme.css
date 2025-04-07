@@ -38,7 +38,6 @@
   outline-offset: 4px;
 }
 
-/** -- **/
 .about-me-wrapper {
   background-color: #1c1d20;
   color: #fafafa;
@@ -74,15 +73,6 @@
 }
 .span {
   color: #ed3b44;
-}
-
-/****/
-
-.ac {
-  margin-bottom: 0 !important;
-  border: none !important;
-  background-color: transparent !important;
-  box-sizing: border-box;
 }
 
 .wrap {
