@@ -81,6 +81,7 @@ body.modal-open {
   letter-spacing: -0.02em;
   text-decoration-line: underline;
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .menu:hover,
 .menu:focus {
@@ -130,6 +131,7 @@ body.modal-open {
   line-height: normal;
   letter-spacing: -0.32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -283,6 +285,7 @@ body.modal-open {
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration-line: underline;
+  cursor: pointer;
 }
 .navi-modal-link:hover,
 .navi-modal-link:focus {
