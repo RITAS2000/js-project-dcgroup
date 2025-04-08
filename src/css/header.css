@@ -86,14 +86,12 @@ body.modal-open {
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration-line: underline;
-  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu:hover,
 .menu:focus {
-  transform: scale(1.07);
-  color: var(--change-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.02);
 }
 
 /* Navigation links container: Hidden by default, fades in when open */
@@ -136,12 +134,12 @@ body.modal-open {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--change-color);
+  transform: scale(1.02);
 }
 
 /* Burger menu button: Visible on mobile, scales on hover */
@@ -157,7 +155,7 @@ body.modal-open {
 }
 .open-menu-btn:hover,
 .open-menu-btn:focus {
-  transform: scale(1.07);
+  transform: scale(1.02);
 }
 @media only screen and (min-width: 768px) {
   .open-menu-btn {
@@ -188,15 +186,14 @@ body.modal-open {
   text-decoration: none;
   box-shadow: 0 0 1px var(--primary-color), 0 0 5px var(--primary-color);
   transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1),
-    scale 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform 0.3s ease;
 }
 .order-link:hover,
 .order-link:focus {
-  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
-    0 0 10px var(--change-color), 0 0 15px var(--change-color),
-    0 0 20px var(--change-color);
+  box-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px rgba(255, 255, 255, 0.5);
   transform: scale(1.02);
 }
+
 @media only screen and (max-width: 767.98px) {
   .order-link {
     display: none;
@@ -226,6 +223,8 @@ body.modal-open {
   pointer-events: initial;
   transform: translateX(0);
   z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Modal content: Centered full-screen container */
@@ -267,7 +266,7 @@ body.modal-open {
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  transform: scale(1.07);
+  transform: scale(1.02);
 }
 .close-icon {
   stroke: #fafafa;
@@ -299,11 +298,11 @@ body.modal-open {
   text-decoration-line: underline;
   color: #fafafa;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navi-modal-link:hover,
 .navi-modal-link:focus {
-  color: var(--change-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.02);
 }
 
 /* Order button in modal */
@@ -327,8 +326,6 @@ body.modal-open {
 }
 .modal-order-link:hover,
 .modal-order-link:focus {
-  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
-    0 0 10px var(--change-color), 0 0 15px var(--change-color),
-    0 0 20px var(--change-color);
+  box-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px rgba(255, 255, 255, 0.5);
   transform: scale(1.02);
 }
