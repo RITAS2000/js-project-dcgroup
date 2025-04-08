@@ -102,7 +102,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease;
   display: block;
   -webkit-tap-highlight-color: transparent;
 }
@@ -110,7 +110,6 @@
 .buttton-benefits:hover,
 .buttton-benefits:focus {
   transform: scale(1.02);
-  background: #e0373f;
   box-shadow: 0 0 12px #f5f5f5;
 }
 
