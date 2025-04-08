@@ -126,6 +126,7 @@
 }
 
 .aboutyou-span-red {
+  animation: pulse 1s infinite alternate;
   color: #ed3b44;
 }
 
@@ -380,3 +381,14 @@
 /* .wrap-item {
   flex-direction: row;
 } */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
