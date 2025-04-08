@@ -15,18 +15,6 @@ const aboutMeAccordion = new Accordion('.accordion-containerX', {
 });
 aboutMeAccordion.open(0);
 
-// const panels = document.querySelectorAll('.about-cart');
-
-// panels.forEach(panel => {
-//   panel.addEventListener('transitionend', () => {
-//     if (panel.style.display === 'block') {
-//       panel.classList.add('open');
-//     } else {
-//       panel.classList.remove('open');
-//     }
-//   });
-// });
-
 // Клас для активного кружечка
 const aboutActiveClass = 'highlighted-slide';
 
