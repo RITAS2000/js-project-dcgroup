@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   padding-top: 54px;
-  padding-bottom: 64px;
   overflow: hidden;
 }
 .visually-hidden-covers {
@@ -81,7 +80,6 @@
 @media only screen and (min-width: 1280px) {
   #covers {
     padding-top: 164px;
-    padding-bottom: 145px;
   }
 }
 
