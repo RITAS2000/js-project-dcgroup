@@ -65,6 +65,32 @@
   width: 343px;
   background: #242527;
 }
+@media (min-width: 366px) and (max-width: 374px) {
+  .aboutyou-container-text {
+    padding: 14px 14px 250px;
+    
+    
+  }
+}
+
+@media (min-width: 354px) and (max-width: 365px) {
+  .aboutyou-container-text{
+    padding: 14px 14px 240px;
+    width: 311px;
+  }
+}
+@media (min-width: 340px) and (max-width: 354px) {
+  .aboutyou-container-text {
+    padding: 14px 14px 240px;
+    width: 300px;
+  }
+}
+@media (min-width: 320px) and (max-width: 339px) {
+  .aboutyou-container-text {
+    padding: 14px 14px 240px;
+    width: 288px;
+  }
+}
 @media (min-width: 767px) {
   .aboutyou-container-text {
     padding: 64px 64px 436px;
@@ -109,6 +135,14 @@
   letter-spacing: -0.03em;
 }
 
+@media (max-width: 374px) {
+  .aboutyou-title {
+    font-size: 14px;
+    line-height: 102%;
+    width: 280px;
+
+  }
+}
 @media (min-width: 767px) {
   .aboutyou-title {
     font-size: 38px;
