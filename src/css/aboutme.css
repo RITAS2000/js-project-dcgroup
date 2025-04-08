@@ -8,24 +8,6 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-/* .moto-wrapper {
-  display: flex;
-} */
-
-/* .motto {
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  padding-top: 32px;
-  margin-bottom: 32px;
-}
-.motto img {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
-
-
 .aboutyou-section{
   padding: 64px 0 32px 0;
 }
@@ -65,32 +47,8 @@
   width: 343px;
   background: #242527;
 }
-@media (min-width: 366px) and (max-width: 374px) {
-  .aboutyou-container-text {
-    padding: 14px 14px 250px;
-    
-    
-  }
-}
 
-@media (min-width: 354px) and (max-width: 365px) {
-  .aboutyou-container-text{
-    padding: 14px 14px 240px;
-    width: 311px;
-  }
-}
-@media (min-width: 340px) and (max-width: 354px) {
-  .aboutyou-container-text {
-    padding: 14px 14px 240px;
-    width: 300px;
-  }
-}
-@media (min-width: 320px) and (max-width: 339px) {
-  .aboutyou-container-text {
-    padding: 14px 14px 240px;
-    width: 288px;
-  }
-}
+
 @media (min-width: 767px) {
   .aboutyou-container-text {
     padding: 64px 64px 436px;
