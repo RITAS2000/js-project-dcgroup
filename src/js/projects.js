@@ -33,4 +33,12 @@ swiper.on('slideChange', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   prevBtn.classList.add('disabled');
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      swiper.slidePrev();
+    } else if (event.key === 'ArrowRight') {
+      swiper.slideNext();
+    }
+  });
 });
