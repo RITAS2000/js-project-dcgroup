@@ -17,6 +17,7 @@
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
+  user-select: none;
 }
 .right-content {
   align-items: flex-start;

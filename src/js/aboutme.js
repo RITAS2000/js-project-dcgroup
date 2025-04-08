@@ -15,6 +15,18 @@ const aboutMeAccordion = new Accordion('.accordion-containerX', {
 });
 aboutMeAccordion.open(0);
 
+// const panels = document.querySelectorAll('.about-cart');
+
+// panels.forEach(panel => {
+//   panel.addEventListener('transitionend', () => {
+//     if (panel.style.display === 'block') {
+//       panel.classList.add('open');
+//     } else {
+//       panel.classList.remove('open');
+//     }
+//   });
+// });
+
 // Клас для активного кружечка
 const aboutActiveClass = 'highlighted-slide';
 
@@ -41,8 +53,8 @@ function initAboutSwiper() {
         highlightActiveSlide(this);
       },
       slideChange: function () {
-  highlightActiveSlide(this);
-},
+        highlightActiveSlide(this);
+      },
       resize: function () {
         highlightActiveSlide(this);
       },
@@ -69,6 +81,5 @@ function highlightActiveSlide(swiper) {
     targetSlide.classList.add(aboutActiveClass);
   }
 }
-
 
 document.addEventListener('DOMContentLoaded', initAboutSwiper);
