@@ -1,41 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('menu-btn');
-    const dropdown = document.getElementById('dropdown-menu');
-    const burger = document.getElementById('burger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeBtn = document.getElementById('close-btn');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-  
-    // Показ/приховування дропдауну для десктопів
-    menuBtn.addEventListener('click', () => {
-      dropdown.classList.toggle('show');
-    });
-  
-    // Відкрити мобільне меню
-    burger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  
-    // Закрити мобільне меню
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
-  
-    // Закрити меню при кліку по лінку
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      });
-    });
-  
-    // Закрити дропдаун при кліку поза ним
-    document.addEventListener('click', e => {
-      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('show');
-      }
-    });
-  });
-  
+// Select DOM elements for modal and navigation interactions
+const modalWindow = document.querySelector(".backdrop");
+const openMenuBtn = document.querySelector(".open-menu-btn");
+const closeModalBtn = document.querySelector(".modal-close-btn");
+const modalMenu = document.querySelector(".navi-modal-wrapper");
+const modalOrderLink = document.querySelector(".modal-order-link"); 
+
+const navigation = document.querySelector(".navi");
+const menu = document.querySelector(".menu");
+const itemsMenu = document.querySelector(".nav-wrapper");
+
+// Add event listeners for modal interactions
+openMenuBtn.addEventListener("click", interactionModalWindow);
+closeModalBtn.addEventListener("click", interactionModalWindow);
+modalMenu.addEventListener("click", interactionModalWindow);
+modalOrderLink.addEventListener("click", interactionModalWindow); 
+
+// Add event listeners for desktop/tablet navigation
+menu.addEventListener("click", interactionMenu);
+itemsMenu.addEventListener("click", interactionMenu);
+
+// Function to toggle the modal window
+function interactionModalWindow() {
+  modalWindow.classList.toggle("is-open");
+  document.body.classList.toggle("modal-open");
+  const isOpen = modalWindow.classList.contains("is-open");
+  openMenuBtn.setAttribute("aria-expanded", isOpen);
+}
+
+// Function to toggle the navigation (desktop/tablet)
+function interactionMenu() {
+  navigation.classList.toggle("is-open");
+}

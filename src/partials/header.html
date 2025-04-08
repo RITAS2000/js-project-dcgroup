@@ -1,41 +1,70 @@
-<header class="header">
-    <div class="container">
-      <!-- Logo -->
-      <a href="#hero" class="logo">
-        <img src="/img/logo/logo1x.png" alt="Lloyd Jefferson" class="responsive-img">
-        <span class="logo-text">Jefferson</span>
+<header class="header" id="header">
+  <div class="header-wrapper container">
+    <nav class="logo-nav">
+      <a href="./index.html" class="logo">
+        <picture>
+          <source srcset="/img/logo/logo2x.png" media="(min-width: 768px)">
+          <img src="/img/logo/logo1x.png" alt="Lloyd Jefferson" class="responsive-img" loading="lazy">
+        </picture>
+        <p class="logo-text">jefferson*</p>
       </a>
-  
-      <!-- Навігація -->
-      <nav class="nav" id="nav">
-        <button class="menu-toggle" id="menu-btn">Menu</button>
-        <ul class="nav-list" id="dropdown-menu">
-          <li><a href="#about" class="nav-link">About me</a></li>
-          <li><a href="#benefits" class="nav-link">Benefits</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
+    </nav>
+    <!-- <svg class="logo-text" width="28" height="28">
+    <use href=""></use>
+  </svg> -->
+    <div class="navigation">
+      <span class="menu">Menu</span>
+      <nav class="navi">
+        <ul class="nav-wrapper">
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutme">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
         </ul>
       </nav>
-  
-      <!-- Кнопка "Order the project" -->
-      <a href="#work" class="order-btn">Order the project</a>
-  
-      <!-- Бургер для мобільних -->
-      <button class="burger" id="burger"><svg class="mob-menu-close" width="36" height="36">
-        <use href="/src/img/sprite.svg#"></use>
-      </svg></button>
     </div>
-  
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobile-menu">
-      <button class="close-btn" id="close-btn">&times;</button>
-      <ul class="mobile-nav">
-        <li><a href="#about" class="mobile-link">About me</a></li>
-        <li><a href="#benefits" class="mobile-link">Benefits</a></li>
-        <li><a href="#projects" class="mobile-link">Projects</a></li>
-        <li><a href="#faq" class="mobile-link">FAQ</a></li>
-        <li><a href="#work" class="mobile-link">Order the project</a></li>
-      </ul>
-    </div>
-  </header>
+    <button class="open-menu-btn" type="button" aria-label="Open menu button" aria-controls="mobile-menu">
+      <svg class="burger-menu" width="28" height="28">
+        <use href="/img/sprite.svg#icon-mobile-menu"></use>
+      </svg>
+    </button>
+    <a class="order-link" href="#work"> Order the project </a>
+  </div>
+</header>
 
+<!--modal window-->
+<div class="backdrop" id="mobile-menu">
+  <div class="modal">
+    <button class="modal-close-btn" type="button" aria-label="Modal close button">
+      <svg class="icon-close" width="28" height="28">
+        <use href="/img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="navi-modal">
+      <ul class="navi-modal-wrapper">
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#aboutme">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#benefits">Benefits</a>
+        </li>
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#faq">FAQ</a>
+        </li>
+      </ul>
+      <!-- Order button in modal -->
+      <a class="modal-order-link" href="#work">Order the project</a>
+    </nav>
+  </div>
+</div>
