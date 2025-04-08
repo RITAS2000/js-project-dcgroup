@@ -14,14 +14,23 @@ const swiper = new Swiper('.projects-swiper', {
 const prevBtn = document.querySelector('.icon-wrapper.left');
 const nextBtn = document.querySelector('.icon-wrapper.right');
 
-prevBtn.addEventListener('click', () => swiper.slidePrev());
-nextBtn.addEventListener('click', () => swiper.slideNext());
+prevBtn.addEventListener('click', () => {
+  if (!prevBtn.classList.contains('disabled')) {
+    swiper.slidePrev();
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if (!nextBtn.classList.contains('disabled')) {
+    swiper.slideNext();
+  }
+});
 
 swiper.on('slideChange', () => {
   prevBtn.classList.toggle('disabled', swiper.isBeginning);
   nextBtn.classList.toggle('disabled', swiper.isEnd);
 });
 
-swiper.on('init', () => {
+window.addEventListener('DOMContentLoaded', () => {
   prevBtn.classList.add('disabled');
 });
