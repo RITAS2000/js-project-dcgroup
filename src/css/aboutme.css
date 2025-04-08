@@ -8,77 +8,90 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.aboutyou-section{
+
+.aboutyou-section {
   padding: 64px 0 32px 0;
 }
+
 @media (min-width: 767px) {
   .aboutyou-section {
     padding-bottom: 48px;
   }
 }
+
 @media (min-width: 1440px) {
   .aboutyou-section {
     padding-top: 96px;
     padding-bottom: 82px
   }
 }
-.aboutyou-container{
+
+.aboutyou-container {
   display: flex;
   gap: 16px;
   flex-direction: column;
   margin-bottom: 32px;
 
 }
+
 @media (min-width: 768px) {
   .aboutyou-container {
     margin-bottom: 64px;
 
   }
 }
+
 @media (min-width: 1440px) {
   .aboutyou-container {
-      flex-direction: row;
-     
-    }
+    flex-direction: row;
+
+  }
 }
-.aboutyou-container-text{
+
+.aboutyou-container-text {
   padding: 32px 32px 272px;
   border-radius: 24px;
-  width: 343px;
   background: #242527;
 }
+
 @media (min-width: 767px) {
   .aboutyou-container-text {
     padding: 64px 64px 436px;
-    width: 704px;
-    
+
+
   }
 }
+
 @media (min-width: 1440px) {
   .aboutyou-container-text {
-      width: 680px;
-  
-    }
+    width: 680px;
+
+  }
 }
+
 .aboutyou-img {
   width: 343px
 }
+
 @media (min-width: 767px) {
   .aboutyou-img {
-      width: 704px
-    }
-}
-@media (min-width: 1440px) {
-.aboutyou-img {
-    width: 680px;
-    
+    width: 704px
   }
 }
+
+@media (min-width: 1440px) {
+  .aboutyou-img {
+    width: 680px;
+
+  }
+}
+
 .aboutyou-container-img {
   border-radius: 24px;
 
-  
+
 }
+
 .aboutyou-title {
   font-family: 'Inter Tight', sans-serif;
   text-transform: uppercase;
@@ -93,10 +106,10 @@
   .aboutyou-title {
     font-size: 14px;
     line-height: 102%;
-    width: 280px;
 
   }
 }
+
 @media (min-width: 767px) {
   .aboutyou-title {
     font-size: 38px;
@@ -104,6 +117,7 @@
 
   }
 }
+
 @media (min-width: 767px) {
   .aboutyou-title {
     font-size: 36px;
@@ -111,26 +125,32 @@
 
   }
 }
+
 .aboutyou-span-red {
   animation: pulse 1s infinite alternate;
   color: #ed3b44;
 }
-.aboutyou-span-grei{
+
+.aboutyou-span-grei {
   color: rgba(250, 250, 250, 0.4)
 }
+
 .wrap {
   margin-bottom: 32px;
 }
+
 @media (min-width: 767px) {
   .wrap {
-      margin-bottom: 64px;
-    }
+    margin-bottom: 64px;
+  }
 }
+
 @media (min-width: 1440px) {
   .wrap {
     margin-bottom: 96px;
   }
 }
+
 .wrap-item {
   border: 1px solid #ddd;
   border-top: none;
@@ -138,34 +158,42 @@
   border-right: none;
   height: auto;
 }
+
 .wrap-item.is-active {
-padding-bottom: 20px;
+  padding-bottom: 20px;
 }
+
 @media (min-width: 767px) {
   .wrap-item.is-active {
-      padding-bottom: 32px;
-    }
+    padding-bottom: 32px;
+  }
 }
-.aboutyou-padding-li-top-first{
+
+.aboutyou-padding-li-top-first {
   padding-bottom: 32px;
 }
-.aboutyou-padding-li-top{
+
+.aboutyou-padding-li-top {
   padding-top: 20px;
   padding-bottom: 32px;
 }
+
 @media (min-width: 767px) {
-.aboutyou-padding-li-top {
+  .aboutyou-padding-li-top {
     padding-top: 32px;
-    
+
   }
 }
+
 .wrap-item:first-child {
   border-top: none;
 }
+
 .aboutyou-container-title-ac {
   display: flex;
   justify-content: space-between;
 }
+
 .item-heder {
   display: flex;
   position: relative;
@@ -181,9 +209,11 @@ padding-bottom: 20px;
   color: rgba(250, 250, 250, 0.4);
   font-family: 'Inter Tight', sans-serif;
 }
+
 .accordion-containerX .about-cart {
   transition: margin-bottom 0.3s ease;
 }
+
 .icon-wrapper {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
@@ -195,6 +225,7 @@ padding-bottom: 20px;
   text-align: center;
   transition: border-color 0.3s ease;
 }
+
 .icon-wrapper .about-me-arrow {
   display: inline-flex;
   position: relative;
@@ -202,30 +233,37 @@ padding-bottom: 20px;
   transform-origin: center;
   transition: transform 0.3s ease;
 }
+
 /* Коли картка активна — обертаємо стрілку */
 .wrap-item.is-active .about-me-arrow {
   transform: rotate(180deg);
 }
+
 .wrap-item.js-enabled .about-cart {
   visibility: hidden;
 }
+
 .wrap-item.is-active .about-cart {
   visibility: visible;
 }
+
 .about-cart {
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
+
 @media (min-width: 1440px) {
   .about-cart {
     width: 612px;
     margin-left: 696px;
   }
 }
+
 .about-text:first-child {
   overflow: visible;
 }
+
 .about-text {
   transition: max-height 0.6s ease;
   border-top: none;
@@ -235,38 +273,52 @@ padding-bottom: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
 }
+
 .aboutyou-margin-paragraf {
   margin-top: 12px;
   margin-bottom: 32px;
 }
+
 @media (min-width: 767px) {
   .aboutyou-margin-paragraf {
-      margin-top: 8px;
-    }
+    margin-top: 8px;
+  }
 }
+
 .about-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 43px;
+  gap: 55px;
   overflow: hidden;
   position: relative;
 }
+
+@media screen and (max-width: 374px) {
+  .about-section {
+    gap: 25px;
+
+  }
+}
+
 @media screen and (min-width: 768px) {
   .about-section {
     gap: 64px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .about-section {
     padding: 0 32px 0 32px;
     gap: 72px;
   }
 }
+
 .circles-wrapper {
   flex: 1 1 auto;
   overflow: hidden;
 }
+
 .circles-wrapper .swiper-slide {
   width: 130px;
   height: 130px;
@@ -284,6 +336,7 @@ padding-bottom: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-sizing: border-box;
 }
+
 @media screen and (min-width: 768px) {
   .circles-wrapper .swiper-slide {
     width: 200px;
@@ -291,38 +344,42 @@ padding-bottom: 20px;
     font-size: 20px;
   }
 }
+
 .circles-wrapper .swiper-slide.highlighted-slide {
   background-color: #ed3b44;
   border: none;
   color: #fafafa;
 }
+
 .arrow-wrapper {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  /* width: 40px; */
 }
+
 .arrow-wrapper:hover,
 .arrow-wrapper:focus {
   transform: scale(1.2);
   transition: transform 0.3s ease;
 }
-.about-swip-arrow-next {
-  cursor: pointer;
-}
+
 .about-icon-right {
   width: 28px;
   height: 28px;
+  fill: #3B3B3B;
   filter: brightness(5) saturate(0) opacity(0.2);
+  cursor: pointer;
 }
+
 @media only screen and (min-width: 768px) {
   .about-icon-right {
     width: 40px;
     height: 40px;
   }
 }
- 
+
 @keyframes pulse {
   0% {
     opacity: 1;
