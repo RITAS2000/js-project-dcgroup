@@ -69,7 +69,15 @@ function sendPost(event) {
 function showModal(type) {
   const modalContent = getModalContent(type);
 
-  const instance = basicLightbox.create(modalContent);
+  const instance = basicLightbox.create(modalContent, {
+    onShow: instance => {
+      document.addEventListener('keydown', closeOnEscape);
+    },
+
+    onClose: instance => {
+      document.removeEventListener('keydown', closeOnEscape);
+    },
+  });
   instance.show();
   document.body.style.overflow = 'hidden';
 
@@ -80,10 +88,7 @@ function showModal(type) {
     instance.close();
     document.body.style.overflow = '';
     closeButton.removeEventListener('click', instanceClose);
-    document.removeEventListener('keydown', closeOnEscape);
   }
-
-  document.addEventListener('keydown', closeOnEscape);
 
   function closeOnEscape(event) {
     if (event.key === 'Escape') {
@@ -91,7 +96,6 @@ function showModal(type) {
       instance.close();
       document.body.style.overflow = '';
       closeButton.removeEventListener('click', instanceClose);
-      document.removeEventListener('keydown', closeOnEscape);
     }
   }
 }
