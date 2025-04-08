@@ -238,7 +238,12 @@
   line-height: 150%;
   letter-spacing: -0.02em;
 }
-
+@media (min-width: 1440px) {
+  .about-cart {
+    width: 612px;
+    margin-left: 696px;
+  }
+}
 .aboutyou-margin-paragraf {
   margin-top: 12px;
   margin-bottom: 32px;
