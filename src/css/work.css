@@ -296,6 +296,14 @@
   background-color: transparent;
   border: none;
   -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s ease;
+}
+.work-close-btn:hover,
+.work-close-btn:focus {
+  transform: scale(1.2);
+}
+.work-close-btn:active {
+  transform: scale(1.2);
 }
 .work-modal-title {
   font-family: 'Inter Tight', sans-serif;
