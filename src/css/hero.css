@@ -71,8 +71,8 @@
 
 @media only screen and (min-width: 1440px) {
   .hero-title {
-    margin-bottom: 243px;
     letter-spacing: -5px;
+    margin-bottom: 243px;
   }
 }
 
@@ -97,7 +97,6 @@
 }
 
 .hero-list {
-  bottom: 32px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -156,7 +155,6 @@
 .mail {
   border-radius: 60px;
   min-width: 178px;
-  padding: 0 12px;
 }
 
 @media only screen and (max-width: 374px) {
