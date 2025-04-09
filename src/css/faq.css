@@ -132,6 +132,9 @@ div.faq-item-header .faq-toggle:hover {
 .is-active .faq-toggle-img {
   transform: rotate(180deg);
 }
+.is-active .faq-toggle-img:active {
+  transform: rotate(180deg);
+}
 .is-active .faq-item-content {
   margin-top: 16px;
 }
