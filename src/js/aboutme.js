@@ -2,9 +2,8 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 
 const aboutMeAccordion = new Accordion('.accordion-containerX', {
   duration: 400,
@@ -18,7 +17,7 @@ const aboutActiveClass = 'highlighted-slide';
 
 function initAboutSwiper() {
   const swiper = new Swiper('.about-swiper', {
-    modules: [Navigation],
+    modules: [Navigation, Keyboard],
     spaceBetween: 0,
     loop: true,
     centeredSlides: false,
@@ -52,14 +51,6 @@ function initAboutSwiper() {
         highlightActiveSlide(this);
       },
     },
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowRight') {
-      swiper.slideNext();
-    } else if (event.key === 'ArrowLeft') {
-      swiper.slidePrev();
-    }
   });
 }
 
