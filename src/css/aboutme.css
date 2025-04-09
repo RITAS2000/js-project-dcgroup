@@ -212,17 +212,8 @@
 .is-active .about-me-arrow {
   transform: rotate(180deg);
 }
-.is-active .about-me-arrow:active {
-  transform: rotate(180deg);
-}
 
-.about-me-arrow {
-  transition: transform 0.3s ease;
-}
 
-.about-me-arrow:hover {
-  transform: scale(1.2);
-}
 
 .icon-wrapper:hover {
   border-color: rgba(250, 250, 250, 0.6);
