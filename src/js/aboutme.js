@@ -1,13 +1,10 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-// core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const aboutMeAccordion = new Accordion('.accordion-containerX', {
   duration: 400,
@@ -17,19 +14,70 @@ const aboutMeAccordion = new Accordion('.accordion-containerX', {
 });
 aboutMeAccordion.open(0);
 
-function initAboutSwiper() {
-  const aboutSwiper = new Swiper('.about-swiper', {
-    modules: [Navigation],
-    slidesPerView: 'auto',
-    spaceBetween: 20, // Додамо відстань між слайдами
+const aboutActiveClass = 'highlighted-slide';
 
-    // Навігаційні стрілки
+function initAboutSwiper() {
+  const swiper = new Swiper('.about-swiper', {
+    modules: [Navigation],
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: false,
+    touchRatio: 1,
+    initialSlide: 0,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
     navigation: {
       nextEl: '.about-swip-arrow-next',
       prevEl: '.about-swip-arrow-prev',
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 'auto',
+      },
+    },
+    on: {
+      init: function () {
+        highlightActiveSlide(this);
+      },
+      slideChange: function () {
+        highlightActiveSlide(this);
+      },
+      resize: function () {
+        highlightActiveSlide(this);
+      },
+    },
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowRight') {
+      swiper.slideNext();
+    } else if (event.key === 'ArrowLeft') {
+      swiper.slidePrev();
+    }
   });
 }
 
-// Викликаємо функцію ініціалізації Swiper після завантаження DOM
+function highlightActiveSlide(swiper) {
+  const slides = swiper.slides;
+  slides.forEach(slide => slide.classList.remove(aboutActiveClass));
+
+  const realIndex = swiper.realIndex;
+  const targetSlide = Array.from(slides).find(slide => {
+    return (
+      Number(slide.dataset.swiperSlideIndex) === realIndex &&
+      !slide.classList.contains('swiper-slide-duplicate')
+    );
+  });
+
+  if (targetSlide) {
+    targetSlide.classList.add(aboutActiveClass);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', initAboutSwiper);

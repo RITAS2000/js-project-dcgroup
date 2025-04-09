@@ -13,6 +13,7 @@
   padding: 20px 0;
   border-top: 1px solid rgba(250, 250, 250, 0.2);
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  transition: border-color 0.3s ease, border-width 0.3s ease;
 }
 @media only screen and (min-width: 768px) {
   .faq-item {
@@ -138,6 +139,6 @@ div.faq-item-header .faq-toggle:hover {
   color: #e0373f;
 }
 .is-active.faq-item {
-  border-top: 2px solid #e0373f;
-  border-bottom: 2px solid #e0373f;
+  border-top-color: #e0373f;
+  border-bottom-color: #e0373f;
 }

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
   <div class="header-wrapper container">
     <nav class="logo-nav">
       <a href="./index.html" class="logo">
@@ -9,9 +9,6 @@
         <p class="logo-text">jefferson*</p>
       </a>
     </nav>
-  <!-- <svg class="logo-text" width="28" height="28">
-    <use href=""></use>
-  </svg> -->
     <div class="navigation">
       <span class="menu">Menu</span>
       <nav class="navi">
@@ -36,18 +33,14 @@
         <use href="/img/sprite.svg#icon-mobile-menu"></use>
       </svg>
     </button>
-      <a class="order-link" href="#work"> Order the project </a>
+    <a class="order-link" href="#work"> Order the project </a>
   </div>
 </header>
 
 <!--modal window-->
 <div class="backdrop" id="mobile-menu">
   <div class="modal">
-    <button
-      class="modal-close-btn"
-      type="button"
-      aria-label="Modal close button"
-    >
+    <button class="modal-close-btn" type="button" aria-label="Modal close button">
       <svg class="icon-close" width="28" height="28">
         <use href="/img/sprite.svg#icon-close"></use>
       </svg>
@@ -55,18 +48,20 @@
     <nav class="navi-modal">
       <ul class="navi-modal-wrapper">
         <li class="nav-item">
-          <a class="navi-modal-link" href="#aboutme">About me</a>
+          <a class="navi-modal-link" href="#aboutme" aria-label="go to aboutme section">About me</a>
         </li>
         <li class="nav-item">
-          <a class="navi-modal-link" href="#benefits">Benefits</a>
+          <a class="navi-modal-link" href="#benefits" aria-label="go to benefits section">Benefits</a>
         </li>
         <li class="nav-item">
-          <a class="navi-modal-link" href="#projects">Projects</a>
+          <a class="navi-modal-link" href="#projects" aria-label="go to project section">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="navi-modal-link" href="#faq">FAQ</a>
+          <a class="navi-modal-link" href="#faq" aria-label="go to faq section">FAQ</a>
         </li>
       </ul>
+      <!-- Order button in modal -->
+      <a class="modal-order-link" href="#work">Order the project</a>
     </nav>
   </div>
 </div>
