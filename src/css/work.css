@@ -8,7 +8,6 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
 }
-
 @media (min-width: 1440px) {
     .work-section .container {
         padding-left: 197px;
@@ -20,14 +19,12 @@
     background-image: url('/img/work/mobil2x.png');
   }
 }
-
 @media (min-width: 768px) and (max-width: 1439px) {
   .work-section {
     max-width: 768px;
     background-image: url('/img/work/tablet2x.png');
   }
 }
-
 @media (min-width: 1440px) {
   .work-section {
     max-width: 1440px;
@@ -36,16 +33,15 @@
 }
 @media (min-width: 768px) {
   .work-section {
-    padding: 80px 0;
+    padding: 80px 0 169px 0;
   }
 }
-.responsive-img {
+.work-logo-img {
   user-select: none;
   width: 40px;
 }
-
 @media (min-width: 768px) {
-  .responsive-img {
+  .work-logo-img {
     width: 80px;
   }
 }
@@ -60,7 +56,6 @@
     margin-bottom: 64px;
   }
 }
-
 .work-text-style {
   text-transform: uppercase;
   font-family: 'Inter Tight', sans-serif;
@@ -78,7 +73,6 @@
     color: #fafafa;
   }
 }
-
 .work-red-text {
     animation: pulse 1s infinite alternate;
   color: #ed3b44;
@@ -88,14 +82,12 @@
   flex-direction: column;
   margin-bottom: 64px;
 }
-
 @media (min-width: 768px) {
   .work-form {
     flex-direction: row;
     margin-bottom: 18px;
   }
 }
-
 .work-address {
   display: flex;
   gap: 4px;
@@ -105,14 +97,13 @@
         gap: 8px;
     }
 }
-
 @media (max-width: 374px) {
   .work-address {
     flex-direction: column;
   }
   .work-email {
     width:182px;
-  }
+}
   .work-tel{
     width: 142px;
   }
@@ -131,9 +122,9 @@
   white-space: nowrap;
 }
 @media (min-width: 768px) {
-    .work-address-style {
-        padding: 18px 32px;
-    }
+  .work-address-style {
+    padding: 18px 32px;
+  }
 }
 .work-address-style:hover {
   transform: scale(1.02);
@@ -165,19 +156,37 @@
   padding-bottom: 26px;
   transition: border 0.3s ease;
   }
-  
-  .work-input:hover {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.5)
+.work-input:hover {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5)
+}
+.work-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .work-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 0;
+    margin-right: 32px;
+    }
   }
+@media (min-width: 1440px) {
+  .work-input-container {
+     margin-right: 64px;
+  }
+}
 .work-position-sucsses {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
   .work-input {
-    margin-top: 46px;
     width: 245px;
-    margin-right: 32px;
   }
 }
 @media (min-width: 1440px) {
@@ -192,7 +201,6 @@
   transform: translate(0, -50%);
   color: rgba(250, 250, 250, 0.6);
 }
-
 .js-input-message {
   position: absolute;
   margin-top: 44px;
@@ -203,15 +211,9 @@
   letter-spacing: -0.02em;
   visibility: hidden;
 }
-@media (min-width: 768px) {
-    .js-input-message {
-        margin-top: 90px;
-    }
-}
 .success {
   color: #3cbc81;
 }
-
 .error {
   color: #e74a3b;
 }
@@ -220,22 +222,6 @@
 }
 .work-input:not(:placeholder-shown):invalid {
   border-bottom: 1px solid #e74a3b;
-}
-.input-gap-top {
-  margin-top: 16px;
-}
-@media (min-width: 768px) {
-  .input-gap-top {
-    margin-top: 46px;
-  }
-}
-.input-gap-second {
-  margin-bottom: 32px;
-}
-@media (min-width: 768px) {
-  .input-gap-second {
-    margin-bottom: 22px;
-  }
 }
 .work-button {
   width: 100px;
@@ -257,17 +243,11 @@
     height: 150px;
   }
 }
-@media (min-width: 1440px) {
-  .work-button {
-    margin-left: 86px;
-  }
-}
 .work-button:hover {
   background: #e0373f;
   transform: scale(1.02);
   box-shadow: 0 0 12px #f5f5f5;
 }
-
 .work-button:focus {
   background: #e0373f;
   transform: scale(1.02);
@@ -286,6 +266,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 16px;
 }
 @media (min-width: 768px) {
     .work-modal-sucssec{
@@ -326,15 +307,13 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: rgba(250, 250, 250, 1);
-  margin-bottom: 16px;
+ 
 }
-
 @media (min-width: 768px) {
 .work-modal-title {
         white-space: nowrap;
     }
 }
-
 .work-modal-text {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
@@ -352,9 +331,6 @@
   line-height: 150%;
   letter-spacing: -0.02em;
 }
-
-
-
 @keyframes pulse {
     0% {
         opacity: 1;

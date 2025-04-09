@@ -1,20 +1,10 @@
 const coversSection = document.querySelector('#covers');
+const coversLists = document.querySelectorAll('.covers-list');
 
 document.addEventListener('DOMContentLoaded', () => {
-  const wrappers = document.querySelectorAll('.covers-list-wrapper');
-  wrappers.forEach(wrapper => {
-    const list = wrapper.querySelector('.covers-list');
-    const items = Array.from(list.children);
-    if (items.length > 0) {
-      const lastItemHTML = items[items.length - 1].outerHTML;
-
-      const remainingItemsHTML = items
-        .slice(0, items.length - 1)
-        .map(item => item.outerHTML)
-        .join('');
-
-      list.innerHTML += lastItemHTML + remainingItemsHTML;
-    }
+  const coversLists = document.querySelectorAll('.covers-list');
+  coversLists.forEach(list => {
+    list.innerHTML += list.innerHTML;
   });
 });
 
