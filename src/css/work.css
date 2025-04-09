@@ -1,48 +1,46 @@
 .work-section {
-  margin: 0 auto;
-  max-width: 375px;
-  background-color: #1c1d20;
   padding: 32px 0;
-  /* background-image: url('/img/work/mobil2x.png'); */
-  background-position: right center;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-}
-@media (min-width: 1440px) {
-    .work-section .container {
-        padding-left: 197px;
-    }
-}
-@media (max-width: 767px) {
-  .work-section {
-    max-width: 375px;
-    background-image: url('/img/work/mobil2x.png');
-  }
-}
-@media (min-width: 768px) and (max-width: 1439px) {
-  .work-section {
-    max-width: 768px;
-    background-image: url('/img/work/tablet2x.png');
-  }
-}
-@media (min-width: 1440px) {
-  .work-section {
-    max-width: 1440px;
-    background-image: url('/img/work/decktop2x.png');
-  }
+ 
 }
 @media (min-width: 768px) {
   .work-section {
     padding: 80px 0 169px 0;
   }
 }
+.work-from-bagraund {
+  margin: 0 auto;
+  max-width: 375px;
+  background-image: url('/img/work/mobil2x.png');
+    background-position: right center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+@media (min-width: 1440px) {
+    .work-section .container {
+        padding-left: 197px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .work-from-bagraund {
+    max-width: 768px;
+    background-image: url('/img/work/tablet2x.png');
+  }
+}
+@media (min-width: 1440px) {
+  .work-from-bagraund {
+    max-width: 1440px;
+    background-image: url('/img/work/decktop2x.png');
+  }
+}
+
 .work-logo-img {
   user-select: none;
   width: 40px;
 }
 @media (min-width: 768px) {
   .work-logo-img {
-    width: 80px;
+    width: 70px;
   }
 }
 .work-logo-text-container {
