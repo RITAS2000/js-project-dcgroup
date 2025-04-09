@@ -88,7 +88,7 @@ body.modal-open {
 }
 .menu:hover,
 .menu:focus {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 
 /* Navigation links container: Hidden by default, fades in when open */
@@ -118,11 +118,11 @@ body.modal-open {
 
 /* Navigation item: Scales on hover */
 .nav-item {
-  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform .3s ease;
 }
 .nav-item:hover,
 .nav-item:focus {
-  transform: scale(1.07);
+  transform: scale(1.2);
 }
 
 /* Navigation link: White text with hover color change */
@@ -136,7 +136,7 @@ body.modal-open {
 }
 .nav-link:hover,
 .nav-link:focus {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 
 /* Burger menu button: Visible on mobile, scales on hover */
@@ -149,10 +149,11 @@ body.modal-open {
   padding: 0;
   background-color: transparent;
   border: none;
+  transition: transform 0.3s ease;
 }
 .open-menu-btn:hover,
 .open-menu-btn:focus {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 @media only screen and (min-width: 768px) {
   .open-menu-btn {
@@ -260,10 +261,11 @@ body.modal-open {
   padding: 0;
   background-color: transparent;
   border: none;
+  transition: transform 0.3s ease;
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 .close-icon {
   stroke: #fafafa;
@@ -295,11 +297,11 @@ body.modal-open {
   text-decoration-line: underline;
   color: #fafafa;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease;
 }
 .navi-modal-link:hover,
 .navi-modal-link:focus {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 
 /* Order button in modal */
@@ -317,12 +319,10 @@ body.modal-open {
   letter-spacing: -0.02em;
   color: var(--text-color);
   text-decoration: none;
-  box-shadow: 0 0 1px var(--primary-color), 0 0 5px var(--primary-color);
-  transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1),
-    scale 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .modal-order-link:hover,
 .modal-order-link:focus {
-  box-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px #f5f5f5;
   transform: scale(1.02);
 }
