@@ -23,7 +23,28 @@
             </div>
 
             <div class="dark-transition">
-              <img class="projects-image project1" src="img/projects/photo1@1x.jpg" alt="Project 1 preview" />
+
+              <picture>
+                <source
+                  srcset="
+                    img/projects/photo1-tablet@1x.jpg 1x,
+                    img/projects/photo1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects/photo1@1x.jpg 1x,
+                    img/projects/photo1@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="projects-image"
+                  src="img/projects/photo1@1x.jpg"
+                  alt="Project 1 preview"
+                />
+              </picture>
+
             </div>
           </div>
         </li>
@@ -46,7 +67,28 @@
                 aria-label="go to github" rel="noopener noreferrer">See project</a>
             </div>
             <div class="dark-transition">
-              <img class="projects-image project2" src="img/projects/photo2@1x.jpg" alt="Project 2 preview" />
+
+              <picture>
+                <source
+                  srcset="
+                    img/projects/photo2-tablet@1x.jpg 1x,
+                    img/projects/photo2-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects/photo2@1x.jpg 1x,
+                    img/projects/photo2@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="projects-image"
+                  src="img/projects/photo2@1x.jpg"
+                  alt="Project 2 preview"
+                />
+              </picture>
+
             </div>
           </div>
         </li>
@@ -69,7 +111,27 @@
                 aria-label="go to github" rel="noopener noreferrer">See project</a>
             </div>
             <div class="dark-transition">
-              <img class="projects-image project3" src="img/projects/photo3@1x.jpg" alt="Project 3 preview" />
+              <picture>
+                <source
+                  srcset="
+                    img/projects/photo3-tablet@1x.jpg 1x,
+                    img/projects/photo3-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    img/projects/photo3@1x.jpg 1x,
+                    img/projects/photo3@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="projects-image"
+                  src="img/projects/photo3@1x.jpg"
+                  alt="Project 3 preview"
+                />
+              </picture>
+
             </div>
           </div>
         </li>
