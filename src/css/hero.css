@@ -58,21 +58,21 @@
   line-height: 1;
   letter-spacing: -1.5px;
   text-transform: uppercase;
-  padding-bottom: 212px;
+  margin-bottom: 212px;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-title {
     font-size: 90px;
     letter-spacing: -2.7px;
-    padding-bottom: 187px;
+    margin-bottom: 187px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero-title {
-    padding-bottom: 243px;
     letter-spacing: -5px;
+    margin-bottom: 243px;
   }
 }
 
@@ -97,7 +97,6 @@
 }
 
 .hero-list {
-  bottom: 32px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -156,7 +155,6 @@
 .mail {
   border-radius: 60px;
   min-width: 178px;
-  padding: 0 12px;
 }
 
 @media only screen and (max-width: 374px) {
