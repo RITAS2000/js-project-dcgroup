@@ -32,10 +32,12 @@
 
 .work-logo-img {
   user-select: none;
+  height: 40px;
   width: 40px;
 }
 @media (min-width: 768px) {
   .work-logo-img {
+    height: 70px;
     width: 70px;
   }
 }

@@ -64,11 +64,13 @@
 }
 
 .aboutyou-img {
+  height: 500px;
   width: 343px;
 }
 
 @media (min-width: 767px) {
   .aboutyou-img {
+    height: 700px;
     width: 704px;
   }
 }
