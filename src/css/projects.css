@@ -108,6 +108,12 @@
   }
 }
 
+.projects-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .projects-button {
   border-radius: 60px;
   padding: 13px 32px;
