@@ -234,7 +234,7 @@ body.modal-open {
   align-items: center; 
   top: 50%;
   left: 50%;
-  background-image: url('../img/hero/hero-mobile@1x.png');
+  background-image: url('../img/hero/hero-mobile@1x.jpg');
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -242,9 +242,9 @@ body.modal-open {
   transform: translate(-50%, -50%) scale(1);
   padding-bottom: 40px; 
 }
-@media only screen and (max-width: 374.98px) and (min-resolution: 192dpi) {
+@media only screen and (max-width: 375px) and (min-resolution: 192dpi) {
   .modal {
-    background-image: url('../img/hero/hero-mobile@2x.png');
+    background-image: url('../img/hero/hero-mobile@2x.jpg');
   }
 }
 
