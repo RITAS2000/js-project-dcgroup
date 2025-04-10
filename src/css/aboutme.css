@@ -64,6 +64,7 @@
 }
 
 .aboutyou-img {
+  border-radius: 24px;
   height: 500px;
   width: 343px;
 }
