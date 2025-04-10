@@ -35,7 +35,7 @@ async function renderReviews() {
             <img
               class="review-avatar"
               src="${review.avatar_url}"
-              alt="${review.author}" width="48"
+              alt="${review.author}" width="48" height="48"
             />
             <h3 class="avatar-name">${review.author}</h3>
             <p class="review-item">
