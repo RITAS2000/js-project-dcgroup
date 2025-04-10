@@ -4,7 +4,7 @@ I’m Fullstack developer Lloyd Jefferson.`,50);const P=new b(".aboutyou-accordi
             <img
               class="review-avatar"
               src="${s.avatar_url}"
-              alt="${s.author}" width="48" height="48"
+              alt="${s.author}" width="48" height="48" loading="lazy"
             />
             <h3 class="avatar-name">${s.author}</h3>
             <p class="review-item">
