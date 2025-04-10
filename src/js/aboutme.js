@@ -10,7 +10,7 @@ const aboutYou = new Accordion('.aboutyou-accordion-container', {
   triggerClass: 'icon-wrapper',
   panelClass: 'about-cart',
 });
-
+aboutYou.open(0);
 const aboutActiveClass = 'highlighted-slide';
 
 function initAboutSwiper() {
