@@ -8,8 +8,6 @@
   }
 }
 .work-from-bagraund {
-  margin: 0 auto;
-  max-width: 375px;
   background-image: url('/img/work/mobil2x.png');
     background-position: right center;
     background-size: auto 100%;
@@ -23,13 +21,11 @@
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .work-from-bagraund {
-    max-width: 768px;
     background-image: url('/img/work/tablet2x.png');
   }
 }
 @media (min-width: 1440px) {
   .work-from-bagraund {
-    max-width: 1440px;
     background-image: url('/img/work/decktop2x.png');
   }
 }
