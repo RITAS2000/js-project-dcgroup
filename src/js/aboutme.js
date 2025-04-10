@@ -1,18 +1,16 @@
 import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 
-const aboutMeAccordion = new Accordion('.accordion-containerX', {
-  duration: 400,
-  elementClass: 'wrap-item',
+const aboutYou = new Accordion('.aboutyou-accordion-container', {
+  duration: 500,
+  elementClass: 'aboutyou-wrap-item',
   triggerClass: 'icon-wrapper',
   panelClass: 'about-cart',
 });
-aboutMeAccordion.open(0);
-
+aboutYou.open(0);
 const aboutActiveClass = 'highlighted-slide';
 
 function initAboutSwiper() {

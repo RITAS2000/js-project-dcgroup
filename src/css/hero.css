@@ -1,20 +1,23 @@
 .hero {
-  background-image: url('../img/hero/hero-mobile@1x.png');
+  background-image: url('../img/hero/hero-mobile@1x.webp');
   background-size: cover;
   padding-top: 281px;
   padding-bottom: 32px;
+  
 }
 
 @media only screen and (min-width: 768px) {
   .hero {
-    background-image: url('../img/hero/hero-tablet@1x.png');
+    background-image: url('../img/hero/hero-tablet@1x.webp');
+  
     padding-top: 300px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero {
-    background-image: url('../img/hero/hero-desktop@1x.png');
+    background-image: url('../img/hero/hero-desktop@1x.webp');
+  
   }
 }
 
@@ -22,18 +25,18 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: url('../img/hero/hero-mobile@2x.png');
+    background-image: url('../img/hero/hero-mobile@2x.webp');
   }
 
   @media only screen and (min-width: 768px) {
     .hero {
-      background-image: url('../img/hero/hero-tablet@2x.png');
+      background-image: url('../img/hero/hero-tablet@2x.webp');
     }
   }
 
   @media only screen and (min-width: 1440px) {
     .hero {
-      background-image: url('../img/hero/hero-desktop@2x.png');
+      background-image: url('../img/hero/hero-desktop@2x.webp');
     }
   }
 }
@@ -58,21 +61,24 @@
   line-height: 1;
   letter-spacing: -1.5px;
   text-transform: uppercase;
-  padding-bottom: 212px;
+  margin-bottom: 212px;
+  height: 250px;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-title {
     font-size: 90px;
     letter-spacing: -2.7px;
-    padding-bottom: 187px;
+    margin-bottom: 187px;
+    height: 450px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero-title {
-    padding-bottom: 243px;
     letter-spacing: -5px;
+    margin-bottom: 243px;
+    height: 270px;
   }
 }
 
@@ -97,7 +103,6 @@
 }
 
 .hero-list {
-  bottom: 32px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -156,7 +161,6 @@
 .mail {
   border-radius: 60px;
   min-width: 178px;
-  padding: 0 12px;
 }
 
 @media only screen and (max-width: 374px) {
